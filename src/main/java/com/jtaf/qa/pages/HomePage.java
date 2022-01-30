@@ -1,5 +1,12 @@
 package com.jtaf.qa.pages;
 
-public class HomePage {
+import com.codeborne.selenide.SelenideDriver;
+
+public class HomePage extends BasePage{
+
+	public HomePage(SelenideDriver selDriver) {
+		super(selDriver);
+		// TODO Auto-generated constructor stub
+	}
 
 }

@@ -4,64 +4,68 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideDriver;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Selenide.*;
+
+import java.time.Duration;
+
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import com.codeborne.selenide.Condition;
+
 /**
  * 
  * @author Jaga
- * 
- * This class contains the reusable methods used in the framework
- * 
+ * @implNote This class contains the reusable components used in the framework.
  * @since 30-01-2022
- * 
  * @version v0.1
  *
  */
-public class BasePage extends Page{
+public class BasePage extends Page {
 
-	public BasePage(SelenideDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
+	public BasePage(SelenideDriver selDriver) {
+		super(selDriver);
 	}
 
 	@Override
 	public String getPageTitle() {
-		// TODO Auto-generated method stub
+		return title();
+	}
+
+	@Override
+	public String getPageHeader(SelenideElement webElement) {
+		return webElement.getText();
+	}
+
+	@Override
+	public SelenideElement getElement(SelenideElement webElement) {
 		return null;
 	}
 
 	@Override
-	public String getPageHeader() {
-		// TODO Auto-generated method stub
+	public ElementsCollection getElements(ElementsCollection webElements) {
 		return null;
 	}
 
 	@Override
-	public SelenideElement getElement() {
-		// TODO Auto-generated method stub
-		return null;
+	public void waitForElementPresent(SelenideElement webElement) {
+		webElement.shouldBe(Condition.appear, Duration.ofSeconds(3));
 	}
 
 	@Override
-	public ElementsCollection getElements() {
-		// TODO Auto-generated method stub
-		return null;
+	public void waitForElementVisible(SelenideElement webElement) {
+		webElement.shouldBe(Condition.visible, Duration.ofSeconds(3));
 	}
 
 	@Override
-	public void waitForElementPresent() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void waitForPageTitle(String title) {
+		try {
+			Wait().until(ExpectedConditions.titleContains(title));
+		} catch (Exception ex) {
+			System.out.println("Some error occured while wait for page title : " + title);
+			ex.printStackTrace();
+		}
 
-	@Override
-	public void waitForElementVisible() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void waitForPageTitle() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

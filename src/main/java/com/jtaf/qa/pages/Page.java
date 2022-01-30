@@ -16,41 +16,38 @@ import static com.codeborne.selenide.Condition.*;
 /**
  * 
  * @author Jaga
- * 
- * This class contains the reusable abstract method definitions used in the framework
- * 
+ * @implNote This class contains the reusable abstract method definitions used in the framework
  * @since 22-01-2022
- * 
  * @version v0.1
  *
  */
 public abstract class Page {
 
-	public SelenideDriver driver = null;
+	public SelenideDriver selDriver = null;
 	public SelenideWait wait = null;
 
-	public Page(SelenideDriver driver) {
-		this.driver = driver;
-		this.wait = new SelenideWait((WebDriver) this.driver, 30, 5);
+	public Page(SelenideDriver selDriver) {
+		this.selDriver = selDriver;
+		this.wait = new SelenideWait((WebDriver) this.selDriver, 30, 5);
 	}
 
 	public abstract String getPageTitle();
 
-	public abstract String getPageHeader();
+	public abstract String getPageHeader(SelenideElement webElement);
 
-	public abstract SelenideElement getElement();
+	public abstract SelenideElement getElement(SelenideElement webElement);
 
-	public abstract ElementsCollection getElements();
+	public abstract ElementsCollection getElements(ElementsCollection webElements);
 
-	public abstract void waitForElementPresent();
+	public abstract void waitForElementPresent(SelenideElement webElement);
 
-	public abstract void waitForElementVisible();
+	public abstract void waitForElementVisible(SelenideElement element);
 
-	public abstract void waitForPageTitle();
+	public abstract void waitForPageTitle(String title);
 
 	public <TPage extends BasePage> TPage getInstance(Class<TPage> pageClass) {
 		try {
-			return pageClass.getDeclaredConstructor(WebDriver.class).newInstance(this.driver);
+			return pageClass.getDeclaredConstructor(WebDriver.class).newInstance(this.selDriver);
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			return null;
