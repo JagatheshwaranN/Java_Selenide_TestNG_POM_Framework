@@ -1,28 +1,30 @@
 package com.jtaf.qa.pages;
 
-import com.codeborne.selenide.SelenideDriver;
+import org.openqa.selenium.WebDriver;
 import com.jtaf.qa.objects.LoginPageObject;
 
 /**
  * 
+ * @implNote This class contains the login page functionality used for the
+ *           application under test.
  * @author Jaga
- * @implNote This class contains the login functionality used for the application under test.
  * @since 30-01-2022
  * @version v0.1
  *
  */
 public class LoginPage extends LoginPageObject {
 
-	public LoginPage(SelenideDriver selDriver) {
+	public LoginPage(WebDriver selDriver) {
 		super(selDriver);
 	}
 
 	/**
 	 * 
+	 * @implNote This method takes the inputs as user name & password and log in to
+	 *           the application.
 	 * @param username
 	 * @param password
 	 * @return HomePage instance
-	 * @implNote This method takes the inputs as user name & password and log in to the application.
 	 * 
 	 */
 	public HomePage doLogin(String username, String password) {
@@ -35,5 +37,4 @@ public class LoginPage extends LoginPageObject {
 		}
 		return getInstance(HomePage.class);
 	}
-
 }

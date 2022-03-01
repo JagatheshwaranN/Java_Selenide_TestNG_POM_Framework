@@ -1,65 +1,57 @@
 package com.jtaf.qa.objects;
 
-import org.openqa.selenium.SearchContext;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
-import com.codeborne.selenide.SelenideDriver;
 import com.codeborne.selenide.SelenideElement;
 import com.jtaf.qa.pages.BasePage;
 
 /**
  * 
- * @author Jaga
  * @implNote This class stores the login page web objects used for the
  *           application under test.
- * @since 30-01-2022
- * @version v0.1
+ * @author Jaga
+ * @since 01-03-2022
+ * @version v0.3
  *
  */
 public class LoginPageObject extends BasePage {
 
-	@FindBy(how = How.CSS, using = "#Email")
-	private SelenideElement emailId;
-	@FindBy(how = How.CSS, using = "#Password")
-	private SelenideElement password;
-	@FindBy(how = How.XPATH, using = "//button[text()='Log in']")
-	private SelenideElement loginButton;
-	@FindBy(how = How.CLASS_NAME, using = "page-title")
-	private SelenideElement header;
+	private By emailId = By.id("Email");
+	private By password = By.id("Password");
+	private By loginButton = By.xpath("//button[text()='Log in']");
+	private By loginPageHeader = By.className("page-title");
 
-	public LoginPageObject(SelenideDriver selDriver) {
+	public LoginPageObject(WebDriver selDriver) {
 		super(selDriver);
-		PageFactory.initElements((SearchContext) selDriver, this);
+	}
+
+	/**
+	 * @return the loginPageHeader
+	 */
+	public SelenideElement getLoginPageHeader() {
+		return getSelenideElement(loginPageHeader);
 	}
 
 	/**
 	 * @return the emailId
 	 */
 	public SelenideElement getEmailId() {
-		return emailId;
+		return getSelenideElement(emailId);
 	}
 
 	/**
 	 * @return the password
 	 */
 	public SelenideElement getPassword() {
-		return password;
+		return getSelenideElement(password);
 	}
 
 	/**
 	 * @return the loginButton
 	 */
 	public SelenideElement getLoginButton() {
-		return loginButton;
-	}
-
-	/**
-	 * @return the header
-	 */
-	public SelenideElement getHeader() {
-		return header;
+		return getSelenideElement(loginButton);
 	}
 
 }
