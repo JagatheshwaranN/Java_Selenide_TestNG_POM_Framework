@@ -6,11 +6,11 @@ import com.jtaf.qa.objects.HomePageObject;
 
 /**
  * 
- * @implNote This class contains the home page functionality used for the
+ * @implNote This class contains the home page functionalities used for the
  *           application under test.
  * @author Jaga
- * @since 14-02-2022
- * @version v0.2
+ * @since 02-03-2022
+ * @version v0.3
  *
  */
 public class HomePage extends HomePageObject {
@@ -19,6 +19,26 @@ public class HomePage extends HomePageObject {
 		super(selDriver);
 	}
 
+	/**
+	 * 
+	 * @implNote This method is used to get the title value of the home page
+	 * @return HomePage title
+	 * 
+	 */
+	public String homePageTitle() {
+		return getPageTitle();
+	}
+	
+	/**
+	 * 
+	 * @implNote This method is used to get the header value of the home page
+	 * @return HomePage header
+	 * 
+	 */
+	public String homePageHeader() {
+		return getElementText(getHomePageHeader());
+	}
+	
 	/**
 	 * @implNote This method is used to navigate to the customer search page of the
 	 *           application.

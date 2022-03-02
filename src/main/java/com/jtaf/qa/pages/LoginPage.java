@@ -5,17 +5,37 @@ import com.jtaf.qa.objects.LoginPageObject;
 
 /**
  * 
- * @implNote This class contains the login page functionality used for the
+ * @implNote This class contains the login page functionalities used for the
  *           application under test.
  * @author Jaga
- * @since 30-01-2022
- * @version v0.1
+ * @since 02-03-2022
+ * @version v0.3
  *
  */
 public class LoginPage extends LoginPageObject {
 
 	public LoginPage(WebDriver selDriver) {
 		super(selDriver);
+	}
+
+	/**
+	 * 
+	 * @implNote This method is used to get the title value of the login page
+	 * @return LoginPage title
+	 * 
+	 */
+	public String loginPageTitle() {
+		return getPageTitle();
+	}
+
+	/**
+	 * 
+	 * @implNote This method is used to get the header value of the login page
+	 * @return LoginPage header
+	 * 
+	 */
+	public String loginPageHeader() {
+		return getElementText(getLoginPageHeader());
 	}
 
 	/**

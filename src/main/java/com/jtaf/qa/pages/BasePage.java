@@ -43,7 +43,7 @@ public class BasePage extends Page {
 		try {
 			element = $(locator);
 		} catch (Exception ex) {
-			System.out.println("Some error occured while creation of element : " + locator.toString());
+			System.out.println("Some error occured while creation of the element " + locator.toString());
 			ex.printStackTrace();
 		}
 		return element;
@@ -65,8 +65,8 @@ public class BasePage extends Page {
 	}
 
 	@Override
-	public String getElementText(SelenideElement element) {
-		return element.getText();
+	public String getElementText(SelenideElement webElement) {
+		return webElement.getText();
 	}
 
 	@Override

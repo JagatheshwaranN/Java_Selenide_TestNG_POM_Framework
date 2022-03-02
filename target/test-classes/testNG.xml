@@ -4,19 +4,19 @@
 	<!-- <listeners>
 		<listener class-name="com.jtaf.qa.listeners.ExtentListener"></listener>
 	</listeners> -->
-	<test name="LoginTest">
+	<!-- <test name="LoginTest">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.jtaf.qa.test.LoginPageTest" />
 		</classes>
-	</test>
-	<!-- <test name="HomePageTest">
+	</test> -->
+	<test name="HomePageTest">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.jtaf.qa.test.HomePageTest" />
 		</classes>
 	</test>
-	<test name="CustomerSearchPageTest">
+	<!-- <test name="CustomerSearchPageTest">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.jtaf.qa.test.CustomerSearchPageTest" />
