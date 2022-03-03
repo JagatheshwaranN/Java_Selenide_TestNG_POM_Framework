@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-testNGSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-testNGSuite" title="com.jtaf.qa.test.HomePageTest" hash-for-method="verifyHomePageTest">verifyHomePageTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-testNGSuite" title="com.jtaf.qa.test.CustomerSearchPageTest" hash-for-method="verifyCustomerSearchTest">verifyCustomerSearchTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-testNGSuite -->
@@ -120,14 +120,14 @@
           <div class="suite-testNGSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.jtaf.qa.test.HomePageTest</span>
+              <span class="class-name">com.jtaf.qa.test.CustomerSearchPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyHomePageTest">
-                  </a> <!-- verifyHomePageTest -->
-                  <span class="method-name">verifyHomePageTest</span>
+                  <a name="verifyCustomerSearchTest">
+                  </a> <!-- verifyCustomerSearchTest -->
+                  <span class="method-name">verifyCustomerSearchTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -142,12 +142,12 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;testNGSuite&quot;&gt;
-  &lt;test thread-count=&quot;1&quot; name=&quot;HomePageTest&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; name=&quot;CustomerSearchPageTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.jtaf.qa.test.HomePageTest&quot;/&gt;
+      &lt;class name=&quot;com.jtaf.qa.test.CustomerSearchPageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- HomePageTest --&gt;
+  &lt;/test&gt; &lt;!-- CustomerSearchPageTest --&gt;
 &lt;/suite&gt; &lt;!-- testNGSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,7 +159,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">HomePageTest (1 class)</span>
+                <span class="test-name">CustomerSearchPageTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,14 +187,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyHomePageTest')
-data.setCell(0, 2, 'com.jtaf.qa.test.HomePageTest')
-data.setCell(0, 3, 5760);
+data.setCell(0, 1, 'verifyCustomerSearchTest')
+data.setCell(0, 2, 'com.jtaf.qa.test.CustomerSearchPageTest')
+data.setCell(0, 3, 10101);
 window.suiteTableData['testNGSuite']= { tableData: data, tableDiv: 'times-div-testNGSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-testNGSuite">
               </div> <!-- times-div-testNGSuite -->
             </div> <!-- times-div -->
@@ -220,26 +220,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.jtaf.qa.test.HomePageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.jtaf.qa.test.CustomerSearchPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">init</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest(chrome)</span>
-                <span class="method-start">42 ms</span>
+                <span class="method-start">50 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyHomePageTest</span>
-                <span class="method-start">6474 ms</span>
+                <span class="method-name">verifyCustomerSearchTest</span>
+                <span class="method-start">7930 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">12238 ms</span>
+                <span class="method-start">18033 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">exit</span>
-                <span class="method-start">12464 ms</span>
+                <span class="method-start">18200 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -12,8 +12,8 @@ import com.codeborne.selenide.SelenideWait;
  * @implNote This class contains the reusable abstract method definitions used
  *           in the framework.
  * @author Jaga
- * @since 26-02-2022
- * @version v0.3
+ * @since 03-03-2022
+ * @version v0.4
  *
  */
 public abstract class Page {
@@ -30,11 +30,11 @@ public abstract class Page {
 
 	public abstract String getPageHeader(SelenideElement webElement);
 
-	public abstract SelenideElement getSelenideElement(By webElement);
+	public abstract SelenideElement getSelenideElement(By locator);
 
-	public abstract ElementsCollection getElements(ElementsCollection webElements);
+	public abstract ElementsCollection getSelenideElements(By locator);
 
-	public abstract void waitForElementPresent(SelenideElement webElement);
+	public abstract boolean waitForElementPresent(SelenideElement webElement);
 
 	public abstract void waitForElementVisible(SelenideElement element);
 

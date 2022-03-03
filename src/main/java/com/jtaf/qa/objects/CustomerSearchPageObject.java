@@ -3,6 +3,7 @@ package com.jtaf.qa.objects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.jtaf.qa.pages.BasePage;
 
@@ -11,8 +12,8 @@ import com.jtaf.qa.pages.BasePage;
  * @implNote This class stores the customer search page web objects used for the
  *           application under test.
  * @author Jaga
- * @since 01-03-2022
- * @version v0.2
+ * @since 03-03-2022
+ * @version v0.3
  *
  */
 public class CustomerSearchPageObject extends BasePage {
@@ -67,8 +68,8 @@ public class CustomerSearchPageObject extends BasePage {
 	/**
 	 * @return the tableCustomerGridName element
 	 */
-	public SelenideElement getTableCustomerGridName() {
-		return getSelenideElement(tableCustomerGridName);
+	public ElementsCollection getTableCustomerGridName() {
+		return getSelenideElements(tableCustomerGridName);
 	}
 
 	/**

@@ -17,8 +17,8 @@ import com.codeborne.selenide.Condition;
  * 
  * @author Jaga
  * @implNote This class contains the reusable components used in the framework.
- * @since 26-02-2022
- * @version v0.3
+ * @since 03-03-2022
+ * @version v0.4
  *
  */
 public class BasePage extends Page {
@@ -50,13 +50,20 @@ public class BasePage extends Page {
 	}
 
 	@Override
-	public ElementsCollection getElements(ElementsCollection webElements) {
-		return null;
+	public ElementsCollection getSelenideElements(By locator) {
+		ElementsCollection element = null;
+		try {
+			element = $$(locator);
+		} catch (Exception ex) {
+			System.out.println("Some error occured while creation of the element " + locator.toString());
+			ex.printStackTrace();
+		}
+		return element;
 	}
 
 	@Override
-	public void waitForElementPresent(SelenideElement webElement) {
-		webElement.shouldBe(Condition.appear, Duration.ofSeconds(3));
+	public boolean waitForElementPresent(SelenideElement webElement) {
+		return webElement.shouldBe(Condition.appear, Duration.ofSeconds(3)) != null;
 	}
 
 	@Override

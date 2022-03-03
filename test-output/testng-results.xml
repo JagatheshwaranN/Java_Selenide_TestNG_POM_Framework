@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="testNGSuite" duration-ms="12427" started-at="2022-03-02T08:37:28Z" finished-at="2022-03-02T08:37:40Z">
+  <suite name="testNGSuite" duration-ms="18153" started-at="2022-03-03T11:59:39Z" finished-at="2022-03-03T11:59:57Z">
     <groups>
     </groups>
-    <test name="HomePageTest" duration-ms="12427" started-at="2022-03-02T08:37:28Z" finished-at="2022-03-02T08:37:40Z">
-      <class name="com.jtaf.qa.test.HomePageTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.jtaf.qa.test.HomePageTest@23faf8f2]" name="init" is-config="true" duration-ms="16" started-at="2022-03-02T08:37:28Z" finished-at="2022-03-02T08:37:28Z">
+    <test name="CustomerSearchPageTest" duration-ms="18153" started-at="2022-03-03T11:59:39Z" finished-at="2022-03-03T11:59:57Z">
+      <class name="com.jtaf.qa.test.CustomerSearchPageTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.jtaf.qa.test.CustomerSearchPageTest@23faf8f2]" name="init" is-config="true" duration-ms="25" started-at="2022-03-03T11:59:39Z" finished-at="2022-03-03T11:59:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="setUpTest(java.lang.String)[pri:0, instance:com.jtaf.qa.test.HomePageTest@23faf8f2]" name="setUpTest" is-config="true" duration-ms="6432" started-at="2022-03-02T08:37:28Z" finished-at="2022-03-02T08:37:34Z">
+        <test-method status="PASS" signature="setUpTest(java.lang.String)[pri:0, instance:com.jtaf.qa.test.CustomerSearchPageTest@23faf8f2]" name="setUpTest" is-config="true" duration-ms="7880" started-at="2022-03-03T11:59:39Z" finished-at="2022-03-03T11:59:47Z">
           <params>
             <param index="0">
               <value>
@@ -22,19 +22,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="verifyHomePageTest()[pri:2, instance:com.jtaf.qa.test.HomePageTest@23faf8f2]" name="verifyHomePageTest" duration-ms="5760" started-at="2022-03-02T08:37:34Z" finished-at="2022-03-02T08:37:40Z">
+        <test-method status="PASS" signature="verifyCustomerSearchTest()[pri:3, instance:com.jtaf.qa.test.CustomerSearchPageTest@23faf8f2]" name="verifyCustomerSearchTest" duration-ms="10101" started-at="2022-03-03T11:59:47Z" finished-at="2022-03-03T11:59:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHomePageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.jtaf.qa.test.HomePageTest@23faf8f2]" name="tearDown" is-config="true" duration-ms="204" started-at="2022-03-02T08:37:40Z" finished-at="2022-03-02T08:37:40Z">
+        </test-method> <!-- verifyCustomerSearchTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.jtaf.qa.test.CustomerSearchPageTest@23faf8f2]" name="tearDown" is-config="true" duration-ms="143" started-at="2022-03-03T11:59:57Z" finished-at="2022-03-03T11:59:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="exit()[pri:0, instance:com.jtaf.qa.test.HomePageTest@23faf8f2]" name="exit" is-config="true" duration-ms="653" started-at="2022-03-02T08:37:40Z" finished-at="2022-03-02T08:37:41Z">
+        <test-method status="PASS" signature="exit()[pri:0, instance:com.jtaf.qa.test.CustomerSearchPageTest@23faf8f2]" name="exit" is-config="true" duration-ms="720" started-at="2022-03-03T11:59:57Z" finished-at="2022-03-03T11:59:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exit -->
-      </class> <!-- com.jtaf.qa.test.HomePageTest -->
-    </test> <!-- HomePageTest -->
+      </class> <!-- com.jtaf.qa.test.CustomerSearchPageTest -->
+    </test> <!-- CustomerSearchPageTest -->
   </suite> <!-- testNGSuite -->
 </testng-results>
