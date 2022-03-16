@@ -1,5 +1,6 @@
 package com.jtaf.qa.pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
@@ -9,12 +10,15 @@ import com.jtaf.qa.objects.CustomerSearchPageObject;
  * 
  * @implNote This class contains the customer search page functionalities used
  *           for the application under test.
+ *           
  * @author Jaga
- * @since 03-03-2022
- * @version v0.4
+ * @since 09-03-2022
+ * @version v0.5
  *
  */
 public class CustomerSearchPage extends CustomerSearchPageObject {
+
+	Logger log = logUtil.getLogger(CustomerSearchPage.class);
 
 	public CustomerSearchPage(WebDriver selDriver) {
 		super(selDriver);
@@ -50,34 +54,35 @@ public class CustomerSearchPage extends CustomerSearchPageObject {
 	 */
 	public void customerSearch(String customerName) {
 		try {
+			log.info("The application customer search page is displayed");
 			getCustomerSearchSection().isDisplayed();
 			getFirstName().sendKeys(customerName);
 			getCustomerSearchButton().click();
 			boolean flag = waitForElementPresent(getTableCustomerGrid());
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(5000);
 			} catch (InterruptedException ex) {
-				ex.printStackTrace();
+				log.info(ex);
 			}
 			if (true == flag) {
 				int customerNameGrid = getTableCustomerGridName().size();
 				if (1 == customerNameGrid) {
 					String actualCustomerName = getTableCustomerGridName().get(0).getText();
-					System.out.println("Actual customer name : " + actualCustomerName);
+					log.info("Actual customer name ===> " + actualCustomerName);
 					if (actualCustomerName.equalsIgnoreCase("Victoria Terces")) {
-						System.out.println("Customer search match successful");
+						log.info("Customer search match is successful");
 					} else {
-						Assert.assertFalse(true, "Customer match unsuccessful");
+						Assert.assertFalse(true, "Customer search match is unsuccessful");
 					}
 				} else {
-					System.out.println("Empty table data found : " + getTableCustomerGridEmpty().isDisplayed());
-					Assert.assertFalse(true, "No customer data found");
+					log.info("Empty table data found ===> " + getTableCustomerGridEmpty().isDisplayed());
+					Assert.assertFalse(true, "No customer data is found");
 				}
 			} else {
-				Assert.assertFalse(true, "No customer search result section found");
+				Assert.assertFalse(true, "No customer search result section is found");
 			}
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while search the customer in the application" + "\n" + ex);
 		}
 	}
 

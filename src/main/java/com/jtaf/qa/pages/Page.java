@@ -11,6 +11,7 @@ import com.codeborne.selenide.SelenideWait;
  * 
  * @implNote This class contains the reusable abstract method definitions used
  *           in the framework.
+ *           
  * @author Jaga
  * @since 05-03-2022
  * @version v0.5

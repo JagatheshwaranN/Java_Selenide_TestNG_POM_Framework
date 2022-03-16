@@ -14,8 +14,8 @@ import com.jtaf.qa.utilties.LoggerUtility;
  *           functions.
  * 
  * @author Jaga
- * @since 05-03-2022
- * @version v0.1
+ * @since 09-03-2022
+ * @version v0.2
  *
  */
 public class JavaScriptHelper extends LoggerUtility {
@@ -64,10 +64,10 @@ public class JavaScriptHelper extends LoggerUtility {
 		}
 	}
 
-	public void scrollIntoViewAndClick(SelenideElement element) {
+	public void scrollIntoViewAndClick(SelenideElement webElement) {
 		try {
-			scrollIntoView(element);
-			element.click();
+			scrollIntoView(webElement);
+			webElement.click();
 			log.info("Scroll to view and click using JavaScript is successful");
 		} catch (Exception ex) {
 			log.info("Error occured while scroll into view and click element using JavaScript" + "\n" + ex);

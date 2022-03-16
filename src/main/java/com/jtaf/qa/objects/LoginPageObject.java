@@ -27,28 +27,28 @@ public class LoginPageObject extends BasePage {
 	}
 
 	/**
-	 * @return the loginPageHeader
+	 * @return the loginPageHeader element
 	 */
 	public SelenideElement getLoginPageHeader() {
 		return getSelenideElement(loginPageHeader);
 	}
 
 	/**
-	 * @return the emailId
+	 * @return the emailId element
 	 */
 	public SelenideElement getEmailId() {
 		return getSelenideElement(emailId);
 	}
 
 	/**
-	 * @return the password
+	 * @return the password element
 	 */
 	public SelenideElement getPassword() {
 		return getSelenideElement(password);
 	}
 
 	/**
-	 * @return the loginButton
+	 * @return the loginButton element
 	 */
 	public SelenideElement getLoginButton() {
 		return getSelenideElement(loginButton);

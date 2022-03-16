@@ -16,19 +16,25 @@ import com.jtaf.qa.utilties.LoggerUtility;
  *           navigations.
  * 
  * @author Jaga
- * @since 05-03-2022
- * @version v0.1
+ * @since 16-03-2022
+ * @version v0.2
  *
  */
 public class BrowserHelper extends LoggerUtility {
 
 	Logger log = getLogger(BrowserHelper.class);
+
 	private WebDriver driver;
 
 	public BrowserHelper(WebDriver driver) {
 		this.driver = driver;
 	}
 
+	/**
+	 * @implNote This method is used to navigate back to the previous page from
+	 *           present page in the browser session.
+	 * 
+	 */
 	public void goBack() {
 		try {
 			back();
@@ -38,6 +44,11 @@ public class BrowserHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to navigate forward to the page from a present
+	 *           page in the browser session.
+	 * 
+	 */
 	public void goForward() {
 		try {
 			forward();
@@ -47,6 +58,10 @@ public class BrowserHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to refresh the current browser page.
+	 * 
+	 */
 	public void doRefresh() {
 		try {
 			refresh();
@@ -56,14 +71,28 @@ public class BrowserHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to get the current browser page URL.
+	 * 
+	 */
 	public String getCurrentPageUrl() {
 		return driver.getCurrentUrl();
 	}
 
+	/**
+	 * @implNote This method is used to get the list of browser window handles.
+	 * 
+	 */
 	public Set<String> getHandles() {
 		return driver.getWindowHandles();
 	}
 
+	/**
+	 * @implNote This method is used to switch to the specific browser window by
+	 *           index.
+	 * 
+	 * @param index
+	 */
 	public void SwitchToWindow(int index) {
 		try {
 			LinkedList<String> windowsId = new LinkedList<String>(getHandles());
@@ -76,6 +105,12 @@ public class BrowserHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to switch to the specific browser window by
+	 *           name or handle or title.
+	 * 
+	 * @param nameOrHandleOrTitle
+	 */
 	public void SwitchToWindow(String nameOrHandleOrTitle) {
 		try {
 			switchTo().window(nameOrHandleOrTitle);
@@ -85,6 +120,10 @@ public class BrowserHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to switch to the parent browser window.
+	 * 
+	 */
 	public void switchToParentWindow() {
 		try {
 			LinkedList<String> windowsid = new LinkedList<String>(getHandles());
@@ -95,6 +134,11 @@ public class BrowserHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to close the child browser windows and switch
+	 *           to the parent browser window.
+	 * 
+	 */
 	public void switchToParentWithChildClose() {
 		try {
 			switchToParentWindow();
@@ -110,6 +154,11 @@ public class BrowserHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to switch to the specific frame by index.
+	 * 
+	 * @param index
+	 */
 	public void switchToFrame(int index) {
 		try {
 			switchTo().frame(index);
@@ -119,6 +168,11 @@ public class BrowserHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to switch to the specific frame by name or id.
+	 * 
+	 * @param nameOrid
+	 */
 	public void switchToFrame(String nameOrid) {
 		try {
 			switchTo().frame(nameOrid);
@@ -128,10 +182,16 @@ public class BrowserHelper extends LoggerUtility {
 		}
 	}
 
-	public void switchToFrame(SelenideElement element) {
+	/**
+	 * @implNote This method is used to switch to the specific frame by selenide
+	 *           element.
+	 * 
+	 * @param webElement
+	 */
+	public void switchToFrame(SelenideElement webElement) {
 		try {
-			switchTo().frame(element);
-			log.info("Switch to frame with element ===> " + element);
+			switchTo().frame(webElement);
+			log.info("Switch to frame with element ===> " + webElement);
 		} catch (Exception ex) {
 			log.info("Error occured while switch to frame" + "\n" + ex);
 		}

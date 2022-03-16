@@ -1,5 +1,6 @@
 package com.jtaf.qa.test;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,12 +11,15 @@ import com.jtaf.qa.pages.LoginPage;
 /**
  * 
  * @implNote This class contains the home page test functionality.
+ * 
  * @author Jaga
- * @since 02-03-2022
- * @version v0.1
+ * @since 09-03-2022
+ * @version v0.2
  *
  */
 public class HomePageTest extends TestBase {
+	
+	Logger log = getLogger(HomePageTest.class);
 
 	@Test(priority = 2)
 	public void verifyHomePageTest() {
@@ -27,7 +31,7 @@ public class HomePageTest extends TestBase {
 			Assert.assertEquals(title, getTestData("home.page.title"));
 			Assert.assertEquals(homePageHeader, getTestData("home.page.header"));
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while verify home page test" + "\n" + ex);
 		}
 	}
 }

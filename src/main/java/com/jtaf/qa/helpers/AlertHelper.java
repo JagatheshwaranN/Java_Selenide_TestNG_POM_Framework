@@ -13,18 +13,27 @@ import com.jtaf.qa.utilties.LoggerUtility;
  * @implNote This class contains the components that handle the Alert pop-ups.
  * 
  * @author Jaga
- * @since 05-03-2022
- * @version v0.1
+ * @since 16-03-2022
+ * @version v0.2
  *
  */
 public class AlertHelper extends LoggerUtility {
 
 	Logger log = getLogger(AlertHelper.class);
 
+	/**
+	 * @implNote This method is used to switch to alert window from normal window.
+	 * 
+	 * @return alert instance
+	 */
 	public Alert getAlert() {
 		return switchTo().alert();
 	}
 
+	/**
+	 * @implNote This method is used to switch to alert window and accept.
+	 * 
+	 */
 	public void acceptAlert() {
 		try {
 			getAlert().accept();
@@ -34,6 +43,10 @@ public class AlertHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to switch to alert window and dismiss.
+	 * 
+	 */
 	public void dismissAlert() {
 		try {
 			getAlert().dismiss();
@@ -43,6 +56,10 @@ public class AlertHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to switch to alert window and get the text.
+	 * 
+	 */
 	public String getAlertText() {
 		String text = null;
 		try {
@@ -55,6 +72,10 @@ public class AlertHelper extends LoggerUtility {
 
 	}
 
+	/**
+	 * @implNote This method is used to check whether the alert window is present.
+	 *
+	 */
 	public boolean isAlertPresent() {
 		try {
 			return getAlert() != null;
@@ -65,6 +86,11 @@ public class AlertHelper extends LoggerUtility {
 
 	}
 
+	/**
+	 * @implNote This method is used to check whether the alert window is present
+	 *           and accept.
+	 *
+	 */
 	public void acceptAlertIfPresent() {
 		try {
 			if (!isAlertPresent()) {
@@ -78,6 +104,11 @@ public class AlertHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to check whether the alert window is present
+	 *           and dismiss.
+	 *
+	 */
 	public void dismissAlertIfPresent() {
 		try {
 			if (!isAlertPresent()) {
@@ -90,6 +121,11 @@ public class AlertHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to check whether the prompt alert window is
+	 *           present, then enter the values and accept.
+	 *
+	 */
 	public void acceptPrompt(String text) {
 		try {
 			if (!isAlertPresent()) {
