@@ -10,18 +10,20 @@ import com.codeborne.selenide.SelenideElement;
 import com.jtaf.qa.utilties.LoggerUtility;
 
 /**
- * 
  * @implNote This class contains the components that handle the Drop downs.
- * 
  * @author Jaga
  * @since 05-03-2022
  * @version v0.1
- *
  */
 public class DropDownHelper extends LoggerUtility {
 
 	Logger log = getLogger(DropDownHelper.class);
 
+	/**
+	 * @implNote This method is used to select the drop down option using the value.
+	 * @param webElement
+	 * @param value
+	 */
 	public void selectByValue(SelenideElement webElement, String value) {
 		try {
 			webElement.selectOptionByValue(value);
@@ -31,6 +33,11 @@ public class DropDownHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to select the drop down option using the index.
+	 * @param webElement
+	 * @param index
+	 */
 	public void selectByIndex(SelenideElement webElement, int index) {
 		try {
 			webElement.selectOption(index);
@@ -40,6 +47,12 @@ public class DropDownHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to select the drop down option using the
+	 *           visible text.
+	 * @param webElement
+	 * @param visibleText
+	 */
 	public void selectByVisibleText(SelenideElement webElement, String visibleText) {
 		try {
 			webElement.selectOption(visibleText);
@@ -49,6 +62,11 @@ public class DropDownHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to get the selected drop down option's value.
+	 * @param webElement
+	 * @return value
+	 */
 	public String getSelectValue(SelenideElement webElement) {
 		String value = null;
 		try {
@@ -60,6 +78,11 @@ public class DropDownHelper extends LoggerUtility {
 		return value;
 	}
 
+	/**
+	 * @implNote This method is used to get the list of drop down options value.
+	 * @param webElement
+	 * @return dropdownvalues
+	 */
 	public List<String> getAllDropDownValue(SelenideElement webElement) {
 		List<String> dropdownvalues = null;
 		try {

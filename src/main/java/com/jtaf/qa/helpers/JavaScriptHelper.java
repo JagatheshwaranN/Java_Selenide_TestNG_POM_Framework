@@ -9,23 +9,30 @@ import com.codeborne.selenide.SelenideElement;
 import com.jtaf.qa.utilties.LoggerUtility;
 
 /**
- * 
- * @implNote This class contains the components that handle the java script
+ * @implNote This class contains the components that handle the javascript
  *           functions.
- * 
  * @author Jaga
  * @since 09-03-2022
  * @version v0.2
- *
  */
 public class JavaScriptHelper extends LoggerUtility {
 
 	Logger log = getLogger(JavaScriptHelper.class);
 
+	/**
+	 * @implNote This method is used to execute the script with arguments.
+	 * @param script
+	 * @param arguments
+	 * @return Object
+	 */
 	public Object executeScript(String script, Object... arguments) {
 		return executeJavaScript(script, arguments);
 	}
 
+	/**
+	 * @implNote This method is used to click the web element using the javascript.
+	 * @param webElement
+	 */
 	public void elementClick(SelenideElement webElement) {
 		try {
 			executeJavaScript("arguments[0].click();", webElement);
@@ -35,6 +42,11 @@ public class JavaScriptHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to scroll to the web element using the
+	 *           javascript.
+	 * @param webElement
+	 */
 	public void scrollToElement(SelenideElement webElement) {
 		try {
 			executeJavaScript("window.scrollTo(arguments[0],arguments[1])", webElement.getLocation().x,
@@ -45,6 +57,11 @@ public class JavaScriptHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to scroll to the web element and click using
+	 *           the javascript.
+	 * @param webElement
+	 */
 	public void scrollToElementAndClick(SelenideElement webElement) {
 		try {
 			scrollToElement(webElement);
@@ -55,6 +72,11 @@ public class JavaScriptHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to scroll into the web element view using the
+	 *           javascript.
+	 * @param webElement
+	 */
 	public void scrollIntoView(SelenideElement webElement) {
 		try {
 			executeJavaScript("arguments[0].scrollIntoView()", webElement);
@@ -64,6 +86,11 @@ public class JavaScriptHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to scroll into the web element view and click
+	 *           using the javascript.
+	 * @param webElement
+	 */
 	public void scrollIntoViewAndClick(SelenideElement webElement) {
 		try {
 			scrollIntoView(webElement);
@@ -74,6 +101,10 @@ public class JavaScriptHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to scroll the cursor to the top of the page
+	 *           using the javascript.
+	 */
 	public void scrollUpVertical() {
 		try {
 			executeJavaScript("window.scrollTo(0, -document.body.scrollHeight)");
@@ -83,6 +114,10 @@ public class JavaScriptHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to scroll the cursor to the bottom of the page
+	 *           using the javascript.
+	 */
 	public void scrollDownVertical() {
 		try {
 			executeJavaScript("window.scrollTo(0, document.body.scrollHeight)");
@@ -92,6 +127,11 @@ public class JavaScriptHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to scroll the cursor up by pixels using the
+	 *           javascript.
+	 * @param pixel
+	 */
 	public void ScrollUpByPixel(String pixel) {
 		try {
 			executeJavaScript("window.scrollBy(0, -'" + pixel + "')");
@@ -101,6 +141,11 @@ public class JavaScriptHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to scroll the cursor down by pixels using the
+	 *           javascript.
+	 * @param pixel
+	 */
 	public void ScrollDownByPixel(String pixel) {
 		try {
 			executeJavaScript("window.scrollBy(0, '" + pixel + "')");
@@ -110,6 +155,11 @@ public class JavaScriptHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to zoom the page size by specific percent using
+	 *           the javascript.
+	 * @param percent
+	 */
 	public void zoomInByPercentage(String percent) {
 		try {
 			executeJavaScript("document.body.style.zoom='" + percent + "'");

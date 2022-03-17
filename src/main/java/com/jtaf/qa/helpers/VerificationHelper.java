@@ -19,6 +19,11 @@ public class VerificationHelper extends LoggerUtility {
 
 	Logger log = getLogger(VerificationHelper.class);
 
+	/**
+	 * @implNote This method is used to verify the element is displayed on the page.
+	 * @param webElement
+	 * @return webElementDisplay
+	 */
 	public boolean verifyElementPresent(SelenideElement webElement) {
 		boolean webElementDisplay = false;
 		try {
@@ -30,6 +35,13 @@ public class VerificationHelper extends LoggerUtility {
 		return webElementDisplay;
 	}
 
+	/**
+	 * @implNote This methosd is used to verify the web element's text and the given
+	 *           text are equal.
+	 * @param webElement
+	 * @param text
+	 * @return flag
+	 */
 	public boolean verifyTextEquals(SelenideElement webElement, String text) {
 		boolean flag = false;
 		try {
@@ -44,6 +56,11 @@ public class VerificationHelper extends LoggerUtility {
 		return flag;
 	}
 
+	/**
+	 * @implNote This method is used to get the text of the web element.
+	 * @param webElement
+	 * @return text
+	 */
 	public String readTextValueFromElement(SelenideElement webElement) {
 		boolean webElementDisplay = false;
 		String text = null;
@@ -59,6 +76,11 @@ public class VerificationHelper extends LoggerUtility {
 		return text;
 	}
 
+	/**
+	 * @implNote This method is used to get the value of the web element.
+	 * @param webElement
+	 * @return value
+	 */
 	public String readValueFromInput(SelenideElement webElement) {
 		String value = null;
 		try {

@@ -19,6 +19,12 @@ public class MouseActionHelper extends LoggerUtility {
 
 	Logger log = getLogger(MouseActionHelper.class);
 
+	/**
+	 * @implNote This method is used to mouse over the web elements using the
+	 *           actions.
+	 * @param webElement1
+	 * @param webElement2
+	 */
 	public void mouseHover(SelenideElement webElement1, SelenideElement webElement2) {
 		try {
 			actions().moveToElement(webElement1).build().perform();
@@ -29,6 +35,11 @@ public class MouseActionHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to right click on the web element using the
+	 *           actions.
+	 * @param webElement
+	 */
 	public void rightClick(SelenideElement webElement) {
 		try {
 			actions().contextClick(webElement).build().perform();
@@ -38,6 +49,11 @@ public class MouseActionHelper extends LoggerUtility {
 		}
 	}
 
+	/**
+	 * @implNote This method is used to double click on the web element using the
+	 *           actions.
+	 * @param webElement
+	 */
 	public void doubleClick(SelenideElement webElement) {
 		try {
 			actions().doubleClick(webElement).build().perform();

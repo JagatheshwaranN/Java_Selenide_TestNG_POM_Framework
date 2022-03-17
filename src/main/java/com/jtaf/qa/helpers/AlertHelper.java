@@ -9,13 +9,10 @@ import org.openqa.selenium.NoAlertPresentException;
 import com.jtaf.qa.utilties.LoggerUtility;
 
 /**
- * 
  * @implNote This class contains the components that handle the Alert pop-ups.
- * 
  * @author Jaga
  * @since 16-03-2022
  * @version v0.2
- *
  */
 public class AlertHelper extends LoggerUtility {
 
@@ -23,7 +20,6 @@ public class AlertHelper extends LoggerUtility {
 
 	/**
 	 * @implNote This method is used to switch to alert window from normal window.
-	 * 
 	 * @return alert instance
 	 */
 	public Alert getAlert() {
@@ -32,7 +28,6 @@ public class AlertHelper extends LoggerUtility {
 
 	/**
 	 * @implNote This method is used to switch to alert window and accept.
-	 * 
 	 */
 	public void acceptAlert() {
 		try {
@@ -45,7 +40,6 @@ public class AlertHelper extends LoggerUtility {
 
 	/**
 	 * @implNote This method is used to switch to alert window and dismiss.
-	 * 
 	 */
 	public void dismissAlert() {
 		try {
@@ -58,7 +52,6 @@ public class AlertHelper extends LoggerUtility {
 
 	/**
 	 * @implNote This method is used to switch to alert window and get the text.
-	 * 
 	 */
 	public String getAlertText() {
 		String text = null;
@@ -74,7 +67,6 @@ public class AlertHelper extends LoggerUtility {
 
 	/**
 	 * @implNote This method is used to check whether the alert window is present.
-	 *
 	 */
 	public boolean isAlertPresent() {
 		try {
@@ -89,7 +81,6 @@ public class AlertHelper extends LoggerUtility {
 	/**
 	 * @implNote This method is used to check whether the alert window is present
 	 *           and accept.
-	 *
 	 */
 	public void acceptAlertIfPresent() {
 		try {
@@ -107,7 +98,6 @@ public class AlertHelper extends LoggerUtility {
 	/**
 	 * @implNote This method is used to check whether the alert window is present
 	 *           and dismiss.
-	 *
 	 */
 	public void dismissAlertIfPresent() {
 		try {
@@ -124,7 +114,6 @@ public class AlertHelper extends LoggerUtility {
 	/**
 	 * @implNote This method is used to check whether the prompt alert window is
 	 *           present, then enter the values and accept.
-	 *
 	 */
 	public void acceptPrompt(String text) {
 		try {

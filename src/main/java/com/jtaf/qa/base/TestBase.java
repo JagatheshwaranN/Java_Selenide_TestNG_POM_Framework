@@ -20,14 +20,11 @@ import com.jtaf.qa.utilties.FileReaderUtility;
 import static com.codeborne.selenide.Selenide.*;
 
 /**
- * 
  * @implNote This class contains the base functionalities needed for the kick
  *           start of the test execution of the application under test.
- * 
  * @author Jaga
  * @since 16-03-2022
  * @version v0.6
- *
  */
 public class TestBase extends FileReaderUtility {
 
@@ -39,9 +36,7 @@ public class TestBase extends FileReaderUtility {
 	/**
 	 * @implNote This method is used to load the property file used for application
 	 *           under test.
-	 * 
 	 * @throws IOException
-	 * 
 	 */
 	@BeforeSuite
 	public void init() throws IOException {
@@ -52,9 +47,7 @@ public class TestBase extends FileReaderUtility {
 	/**
 	 * @implNote This method is used to invoke the browser based on the param passed
 	 *           from the testNG.xml file.
-	 * 
 	 * @param browser
-	 * 
 	 */
 	@BeforeMethod
 	@Parameters(value = { "browser" })
@@ -85,7 +78,6 @@ public class TestBase extends FileReaderUtility {
 	/**
 	 * @implNote This method is used to close the active browser window of the
 	 *           application under test.
-	 * 
 	 */
 	@AfterMethod
 	public void tearDown() {
@@ -95,7 +87,6 @@ public class TestBase extends FileReaderUtility {
 	/**
 	 * @implNote This method is used to close all the active browser windows of the
 	 *           application under test.
-	 * 
 	 */
 	@AfterSuite
 	public void exit() {
