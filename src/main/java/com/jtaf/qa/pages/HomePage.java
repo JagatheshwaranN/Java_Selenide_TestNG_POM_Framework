@@ -6,14 +6,11 @@ import org.openqa.selenium.WebDriver;
 import com.jtaf.qa.objects.HomePageObject;
 
 /**
- * 
  * @implNote This class contains the home page functionalities used for the
- *           application under test.
- *           
+ *           application under test.          
  * @author Jaga
  * @since 09-03-2022
  * @version v0.4
- *
  */
 public class HomePage extends HomePageObject {
 	
@@ -24,20 +21,16 @@ public class HomePage extends HomePageObject {
 	}
 
 	/**
-	 * 
 	 * @implNote This method is used to get the title value of the home page
 	 * @return HomePage title
-	 * 
 	 */
 	public String homePageTitle() {
 		return getPageTitle();
 	}
 
 	/**
-	 * 
 	 * @implNote This method is used to get the header value of the home page
 	 * @return HomePage header
-	 * 
 	 */
 	public String homePageHeader() {
 		return getElementText(getHomePageHeader());

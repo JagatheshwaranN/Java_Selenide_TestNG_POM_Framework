@@ -7,13 +7,11 @@ import com.codeborne.selenide.SelenideElement;
 import com.jtaf.qa.pages.BasePage;
 
 /**
- * 
  * @implNote This class stores the login page web objects used for the
  *           application under test.
  * @author Jaga
  * @since 01-03-2022
  * @version v0.3
- *
  */
 public class LoginPageObject extends BasePage {
 

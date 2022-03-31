@@ -1,0 +1,2332 @@
+<html lang="en" dir="ltr" class="k-webkit k-webkit99"><head>
+<title>Dashboard / nopCommerce administration</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<link rel="stylesheet" type="text/css" href="/css/HomeIndex.Head.styles.css?v=zyaFnj9a1A_h4cuup3Av-zZN7a4">
+<script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="/lib_npm/jquery/jquery.min.js?v=meexYto0mAKr6PjyeE37ROc-We8"></script>
+<script type="text/javascript" src="/js/HomeIndex.Head.scripts.js?v=w4Q0CVPsnuTlXUuKzmmcPH6M3yM"></script>
+<style type="text/css">/* Chart.js */
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
+<body class="hold-transition sidebar-mini layout-fixed control-sidebar-slide-open modal-open" style="padding-right: 17px;">
+<div class="throbber">
+<div class="curtain">
+</div>
+<div class="curtain-content">
+<div>
+<h1 class="throbber-header">Wait...</h1>
+<p>
+<img src="/css/admin/images/throbber-synchronizing.gif" alt="">
+</p>
+</div>
+</div>
+</div>
+<div id="ajaxBusy" style="display: none;">
+<span>&nbsp;</span>
+</div>
+<div class="wrapper">
+<nav class="main-header navbar navbar-expand-md navbar-dark bg-dark">
+<ul class="navbar-nav pl-2 pl-md-0">
+<li class="nav-item">
+<a class="nav-link" id="nopSideBarPusher" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+</li>
+</ul>
+<a href="/Admin" class="brand-link navbar-dark">
+<img src="/css/admin/images/logo.png" alt="logo.png" class="brand-image logo d-block d-md-none d-sm-block d-sm-none">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarText">
+<ul class="navbar-nav ml-auto pl-2">
+<li class="nav-item">
+</li>
+<li class="nav-item">
+<a href="#" class="nav-link disabled">John Smith</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/logout">Logout</a>
+</li>
+<li class="nav-item">
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link" href="#" data-toggle="dropdown">
+<i class="fas fa-cogs"></i>
+</a>
+<ul class="maintenance-menu dropdown-menu dropdown-menu-right" role="menu">
+<li class="dropdown-item">
+<form action="/Admin/Common/ClearCache" method="post">
+<input name="returnurl" type="hidden" value="/admin/">
+<div class="input-group-append">
+<button type="submit" style="width:210px;background-color: Transparent;">
+<span>Clear cache</span>
+</button>
+</div>
+ <input name="__RequestVerificationToken" type="hidden" value="CfDJ8K5ZJ_fvx_lHg-2EHjkH9lR7VrR59hJH0UXTdqZMRfMWrOQtP74iHPCTFueAzJcpgq_-TRbkJb8L13aIDdF8GQ_-k0wt_6LzHqT_S8ita66vTmCRNdgXm76fehMyRraWaIazBRMVsFDH7NTCnylfMYI"></form>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+<a href="/Admin" class="brand-link navbar-dark logo-switch">
+<img src="/css/admin/images/logo.png" alt="logo.png" class="brand-image-xl logo-xl">
+<img src="/css/admin/images/logo-mini.png" alt="logo.png" class="brand-image-xs logo-xs">
+</a>
+<div class="sidebar">
+<div class="sidebar-form">
+<div id="search-box">
+<span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" class="form-control admin-search-box typeahead tt-input" placeholder="Search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;source sans pro&quot;, -apple-system, BlinkMacSystemFont, &quot;segoe ui&quot;, Roboto, &quot;helvetica neue&quot;, Arial, sans-serif, &quot;apple color emoji&quot;, &quot;segoe ui emoji&quot;, &quot;segoe ui symbol&quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div class="tt-dataset tt-dataset-pages"></div></div></span>
+</div>
+</div>
+<nav class="mt-2">
+<ul class="nav nav-pills nav-sidebar flex-column nav-legacy" data-widget="treeview" role="menu">
+<li class="nav-item">
+<a href="/Admin" class="nav-link active">
+<i class="nav-icon fas fa-desktop"></i>
+<p> Dashboard</p>
+</a>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-book"></i>
+<p>
+Catalog
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="/Admin/Product/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Products</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Category/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Categories</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Manufacturer/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Manufacturers</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/ProductReview/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Product reviews</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Product/ProductTags" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Product tags</p>
+</a>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p>
+Attributes
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="/Admin/ProductAttribute/List" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Product attributes</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/SpecificationAttribute/List" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Specification attributes</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/CheckoutAttribute/List" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Checkout attributes</p>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-shopping-cart"></i>
+<p>
+Sales
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="/Admin/Order/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Orders</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Order/ShipmentList" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Shipments</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/ReturnRequest/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Return requests</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/RecurringPayment/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Recurring payments</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/GiftCard/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Gift cards</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/ShoppingCart/CurrentCarts" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Shopping carts and wishlists</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon far fa-user"></i>
+<p>
+Customers
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="/Admin/Customer/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Customers</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/CustomerRole/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Customer roles</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/OnlineCustomer/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Online customers</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Vendor/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Vendors</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/ActivityLog/ActivityLogs" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Activity log</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/ActivityLog/ActivityTypes" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Activity Types</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Customer/GdprLog" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> GDPR requests (log)</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-tags"></i>
+<p>
+Promotions
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="/Admin/Discount/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Discounts</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Affiliate/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Affiliates</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/NewsLetterSubscription/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Newsletter subscribers</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Campaign/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Campaigns</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-cubes"></i>
+<p>
+Content management
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="/Admin/Topic/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Topics (pages)</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/MessageTemplate/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Message templates</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/News/NewsItems" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> News items</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/News/NewsComments" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> News comments</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Blog/BlogPosts" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Blog posts</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Blog/BlogComments" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Blog comments</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Poll/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Polls</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Forum/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Forums</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-cogs"></i>
+<p>
+Configuration
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p>
+Settings
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="/Admin/Setting/GeneralCommon" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> General settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/CustomerUser" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Customer settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/Order" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Order settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/Shipping" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Shipping settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/Tax" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Tax settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/Catalog" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Catalog settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/ShoppingCart" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Shopping cart settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/RewardPoints" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Reward points</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/Gdpr" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> GDPR settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/Vendor" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Vendor settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/Blog" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Blog settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/News" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> News settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/Forum" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Forum settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/Media" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Media settings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Setting/AllSettings" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> All settings (advanced)</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="/Admin/EmailAccount/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Email accounts</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Store/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+
+<p> Stores</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Country/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Countries</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Language/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Languages</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Currency/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Currencies</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Payment/Methods" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Payment methods</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Payment/MethodRestrictions" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Payment restrictions</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Tax/Providers" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Tax providers</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Tax/Categories" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Tax categories</p>
+</a>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p>
+Shipping
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="/Admin/Shipping/Providers" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Shipping providers</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Shipping/Warehouses" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Warehouses</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Shipping/PickupPointProviders" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Pickup points</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Shipping/DatesAndRanges" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Dates and ranges</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Measure/List" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Measures</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="/Admin/Security/Permissions" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Access control list</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Widget/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Widgets</p>
+</a>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p>
+Authentication
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+ <li class="nav-item">
+<a href="/Admin/Authentication/ExternalMethods" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> External authentication</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Authentication/MultiFactorMethods" class="nav-link">
+<i class="nav-icon far fa-circle"></i>
+<p> Multi-factor authentication</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="/Admin/WebApiFrontend/Configure" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Web API</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Plugin/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Local plugins</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Plugin/OfficialFeed" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> All plugins and themes</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-cube"></i>
+<p>
+System
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="/Admin/Common/SystemInfo" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> System information</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Log/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Log</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Common/Warnings" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Warnings</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Common/Maintenance" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Maintenance</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/QueuedEmail/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Message queue</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/ScheduleTask/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Schedule tasks</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Common/SeNames" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Search engine friendly page names</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Template/List" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Templates</p>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-chart-line"></i>
+<p>
+Reports
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="/Admin/Report/SalesSummary" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Sales summary</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Report/LowStock" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Low stock</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Report/Bestsellers" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Bestsellers</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Report/NeverSold" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Products never purchased</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Report/CountrySales" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Country sales</p>
+</a>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p>
+Customer reports
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="/Admin/Report/RegisteredCustomers" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Registered customers</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Report/BestCustomersByOrderTotal" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Customers by order total</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="/Admin/Report/BestCustomersByNumberOfOrders" class="nav-link">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Customers by number of orders</p>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item has-treeview">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-question-circle"></i>
+<p>
+Help
+<i class="right fas fa-angle-left "></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item">
+<a href="https://docs.nopcommerce.com?utm_source=admin-panel&amp;utm_medium=menu&amp;utm_campaign=documentation&amp;utm_content=help" class="nav-link" target="_blank">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Documentation</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="https://www.nopcommerce.com/boards?utm_source=admin-panel&amp;utm_medium=menu&amp;utm_campaign=forum&amp;utm_content=help" class="nav-link" target="_blank">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Community forums</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="https://www.nopcommerce.com/nopcommerce-premium-support-services?utm_source=admin-panel&amp;utm_medium=menu&amp;utm_campaign=premium_support&amp;utm_content=help" class="nav-link" target="_blank">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Premium support services</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="https://www.nopcommerce.com/solution-partners?utm_source=admin-panel&amp;utm_medium=menu&amp;utm_campaign=solution_partners&amp;utm_content=help" class="nav-link" target="_blank">
+<i class="nav-icon far fa-dot-circle"></i>
+<p> Solution partners</p>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav> 
+</div>
+</aside>
+<div class="content-wrapper">
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8K5ZJ_fvx_lHg-2EHjkH9lR7VrR59hJH0UXTdqZMRfMWrOQtP74iHPCTFueAzJcpgq_-TRbkJb8L13aIDdF8GQ_-k0wt_6LzHqT_S8ita66vTmCRNdgXm76fehMyRraWaIazBRMVsFDH7NTCnylfMYI">
+<div class="content-header">
+<h1>
+Dashboard
+</h1>
+</div>
+<section class="content">
+<div class="container-fluid">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-12">
+<div class="card card-primary card-outline " id="nopcommerce-news-box">
+<div class="card-header with-border clearfix">
+<div class="card-title">
+<i class="far fa-newspaper"></i>
+NopCommerce News
+</div>
+<div class="card-tools float-right">
+<button type="button" class="btn btn-tool" data-card-widget="collapse">
+<i class="fas fa-minus"></i> </button>
+</div>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-md-4">
+<div class="card card-info">
+<div class="card-header clearfix">
+<a class="float-left" href="https://www.nopcommerce.com/nopcommerce-copyright-removal-key?utm_source=demo-admin-panel&amp;utm_medium=dashboard&amp;utm_campaign=powered_by_nopcommerce">"Powered by nopCommerce" link</a>
+</div>
+<div class="card-body">
+Would you like to remove the "Powered by nopCommerce" link in the bottom of the footer? Click <a href="https://www.nopcommerce.com/nopcommerce-copyright-removal-key?utm_source=demo-admin-panel&amp;utm_medium=dashboard&amp;utm_campaign=powered_by_nopcommerce">here</a> for more info.
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card card-info">
+<div class="card-header clearfix">
+<a class="float-left" href="https://www.nopcommerce.com/nopcommerce-premium-support-services?utm_source=demo-admin-panel&amp;utm_medium=dashboard&amp;utm_campaign=premium_support">Premium support services</a>
+</div>
+<div class="card-body">
+Get dedicated support from the nopCommerce team with a guaranteed response within 24 hours. Click <a href="https://www.nopcommerce.com/nopcommerce-premium-support-services?utm_source=demo-admin-panel&amp;utm_medium=dashboard&amp;utm_campaign=premium_support">here</a> for more info.
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card card-info">
+<div class="card-header clearfix">
+<a class="float-left" href="https://www.everleap.com/cloud-hosting/web-app/nopcommerce/hosting/?utm_source=NOPC&amp;utm_medium=TXT&amp;utm_content=PREMCP&amp;utm_campaign=MIG30DYS">Recommended hosting for your store</a>
+</div>
+<div class="card-body">
+Everleap cloud hosting seamlessly scales sites with ease and they move stores for free. <a href="https://www.everleap.com/cloud-hosting/web-app/nopcommerce/hosting/?utm_source=NOPC&amp;utm_medium=TXT&amp;utm_content=PREMCP&amp;utm_campaign=MIG30DYS" target="_blank">Learn more</a> and get a 30 day free trial.
+</div>
+</div>
+</div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="card card-primary card-outline " id="nopcommerce-common-statistics-card">
+<div class="card-header with-border clearfix">
+<div class="card-title">
+<i class="far fa-chart-bar"></i>
+Common statistics
+</div>
+<div class="card-tools float-right">
+<button type="button" class="btn btn-tool" data-card-widget="collapse">
+<i class="fas fa-minus"></i> </button>
+</div>
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-lg-3 col-6">
+<div class="small-box bg-info">
+<div class="inner">
+<h3>5</h3>
+<p>Orders</p>
+</div>
+<div class="icon">
+<i class="ion ion-bag"></i>
+</div>
+<a class="small-box-footer" href="/Admin/Order/List">
+More info
+<i class="fas fa-arrow-circle-right"></i>
+</a>
+</div>
+</div>
+<div class="col-lg-3 col-6">
+<div class="small-box bg-yellow">
+<div class="inner">
+<h3>0</h3>
+<p>Pending return requests</p>
+</div>
+<div class="icon">
+<i class="ion ion-refresh"></i>
+</div>
+<a class="small-box-footer" href="/Admin/ReturnRequest/List">
+More info
+<i class="fas fa-arrow-circle-right"></i>
+</a>
+</div>
+</div>
+<div class="col-lg-3 col-6">
+<div class="small-box bg-green">
+<div class="inner">
+<h3>7</h3>
+<p>Registered customers</p>
+</div>
+<div class="icon">
+<i class="ion ion-person-add"></i>
+</div>
+<a class="small-box-footer" href="/Admin/Customer/List">
+More info
+<i class="fas fa-arrow-circle-right"></i>
+</a>
+</div>
+</div>
+<div class="col-lg-3 col-6">
+<div class="small-box bg-red">
+<div class="inner">
+<h3>1</h3>
+<p>Low stock products</p>
+</div>
+<div class="icon">
+<i class="ion ion-pie-graph"></i>
+</div>
+<a class="small-box-footer" href="/Admin/Report/LowStock">
+More info
+<i class="fas fa-arrow-circle-right"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card card-primary card-outline " id="order-statistics-card">
+<div class="card-header with-border">
+<h3 class="card-title">
+<i class="fas fa-shopping-cart"></i>
+ Orders
+</h3>
+<div class="card-tools float-right">
+<button class="btn btn-xs btn-info btn-flat margin-r-5" data-chart-role="toggle-chart" data-chart-period="year">Year</button>
+<button class="btn btn-xs btn-info btn-flat margin-r-5" data-chart-role="toggle-chart" data-chart-period="month">Month</button>
+<button class="btn btn-xs btn-info btn-flat bg-light-blue" data-chart-role="toggle-chart" data-chart-period="week">Week</button>
+<button type="button" class="btn btn-tool margin-l-10" data-card-widget="collapse">
+<i class="fas fa-minus"></i> </button>
+</div>
+</div>
+<div class="card-body">
+<div class="chart" style="height: 300px;">
+<canvas id="order-statistics-chart" height="300" style="display: block; width: 469px; height: 300px;" width="469" class="chartjs-render-monitor"></canvas>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card card-primary card-outline " id="customer-statistics-card">
+<div class="card-header with-border">
+<h3 class="card-title">
+<i class="far fa-user"></i>
+New customers
+</h3>
+<div class="card-tools float-right">
+<button class="btn btn-xs btn-info btn-flat margin-r-5" data-chart-role="toggle-chart" data-chart-period="year">Year</button>
+<button class="btn btn-xs btn-info btn-flat margin-r-5" data-chart-role="toggle-chart" data-chart-period="month">Month</button>
+<button class="btn btn-xs btn-info btn-flat bg-light-blue" data-chart-role="toggle-chart" data-chart-period="week">Week</button>
+<button class="btn btn-tool margin-l-10" data-card-widget="collapse">
+<i class="fas fa-minus"></i> </button>
+</div>
+</div>
+<div class="card-body">
+<div class="chart" style="height: 300px;">
+<canvas id="customer-statistics-chart" height="300"></canvas>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8">
+<div class="card card-primary card-outline " id="order-average-report-card">
+<div class="card-header with-border">
+<h3 class="card-title">
+<i class="far fa-money-bill-alt"></i>
+Order totals
+</h3>
+<div class="card-tools float-right">
+<button class="btn btn-tool" data-card-widget="collapse">
+<i class="fas fa-minus"></i> </button>
+</div>
+</div>
+<div class="card-body" style="padding-bottom: 22px;">
+<div id="average-order-report-grid_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-md-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 643.656px; padding-right: 0px;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" role="grid" style="margin-left: 0px; width: 643.656px;"><thead><tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 108.172px;">Order Status</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 54.8281px;">Today</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 87.3594px;">This Week</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 96.3281px;">This Month</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 78.375px;">This Year</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 67.5938px;">All time</th></tr></thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" id="average-order-report-grid" role="grid" style="width: 100%;"><thead><tr role="row" style="height: 0px;"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 108.172px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Order Status</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 54.8281px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Today</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 87.3594px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">This Week</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 96.3281px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">This Month</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 78.375px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">This Year</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 67.5938px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">All time</div></th></tr></thead>
+<tbody></tbody></table></div></div></div></div><div class="row margin-t-5"><div class="col-lg-5 col-xs-12"><div class="float-lg-left"></div></div><div class="col-lg-3 col-xs-12"><div class="text-center"></div></div><div class="col-lg-3 col-xs-12"><div class="float-lg-right text-center"></div></div><div class="col-lg-1 col-xs-12"><div class="float-lg-right text-center data-tables-refresh"><div class="dt-buttons btn-group flex-wrap"><button class="btn btn-secondary" tabindex="0" aria-controls="average-order-report-grid" type="button"><span><i class="fas fa-sync-alt" style="padding-left: 5px"></i></span></button> </div></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card card-primary card-outline " id="order-incomplete-report-card">
+<div class="card-header with-border">
+<h3 class="card-title">
+<i class="fas fa-hourglass-start"></i>
+Incomplete orders
+</h3>
+<div class="card-tools float-right">
+<button class="btn btn-tool" data-card-widget="collapse">
+<i class="fas fa-minus"></i> </button>
+</div>
+</div>
+<div class="card-body">
+<div id="incomplete-order-report-grid_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-md-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 294.328px; padding-right: 0px;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" role="grid" style="margin-left: 0px; width: 294.328px;"><thead><tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 48.8906px;">Item</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 49.9062px;">Total</th><th class="sorting_disabled button-column" rowspan="1" colspan="1" style="width: 119.531px;">Count</th></tr></thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" id="incomplete-order-report-grid" role="grid" style="width: 100%;"><thead><tr role="row" style="height: 0px;"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 48.8906px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Item</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 49.9062px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Total</div></th><th class="sorting_disabled button-column" rowspan="1" colspan="1" style="width: 119.531px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Count</div></th></tr></thead>
+<tbody></tbody></table></div></div></div></div><div class="row margin-t-5"><div class="col-lg-5 col-xs-12"><div class="float-lg-left"></div></div><div class="col-lg-3 col-xs-12"><div class="text-center"></div></div><div class="col-lg-3 col-xs-12"><div class="float-lg-right text-center"></div></div><div class="col-lg-1 col-xs-12"><div class="float-lg-right text-center data-tables-refresh"><div class="dt-buttons btn-group flex-wrap"><button class="btn btn-secondary" tabindex="0" aria-controls="incomplete-order-report-grid" type="button"><span><i class="fas fa-sync-alt" style="padding-left: 5px"></i></span></button> </div></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8">
+<div class="card card-primary card-outline " id="latest-orders-card">
+<div class="card-header with-border">
+<h3 class="card-title">
+<i class="fas fa-cart-plus"></i>
+Latest Orders
+<a class="btn btn-xs btn-info btn-flat margin-l-10" href="/Admin/Order/List">View All Orders</a>
+</h3>
+<div class="card-tools float-right">
+<button class="btn btn-tool" data-card-widget="collapse">
+<i class="fas fa-minus"></i> </button>
+</div>
+</div>
+<div class="card-body">
+<div id="orders-grid_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-md-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 643.656px; padding-right: 0px;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" role="grid" style="margin-left: 0px; width: 643.656px;"><thead><tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 72.8125px;">Order #</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 89.5156px;">Order status</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 216.531px;">Customer</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 91.7344px;">Created on</th><th class="sorting_disabled button-column" rowspan="1" colspan="1" style="width: 47.0625px;">View</th></tr></thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" id="orders-grid" role="grid" aria-describedby="orders-grid_info" style="width: 100%;"><thead><tr role="row" style="height: 0px;"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 72.8125px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Order #</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 89.5156px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Order status</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 216.531px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Customer</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 91.7344px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Created on</div></th><th class="sorting_disabled button-column" rowspan="1" colspan="1" style="width: 47.0625px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">View</div></th></tr></thead>
+<tbody></tbody></table></div></div></div></div><div class="row margin-t-5"><div class="col-lg-10 col-xs-12"><div class="float-lg-left"><div class="dataTables_paginate paging_simple_numbers" id="orders-grid_paginate"></div></div></div><div class="col-lg-2 col-xs-12"><div class="float-lg-right text-center"><div class="dataTables_info" id="orders-grid_info" role="status" aria-live="polite"></div></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card card-primary card-outline " id="popular-search-terms-card">
+<div class="card-header with-border">
+<h3 class="card-title">
+<i class="fas fa-search"></i>
+Popular search keywords
+</h3>
+<div class="card-tools float-right">
+<button class="btn btn-tool" data-card-widget="collapse">
+<i class="fas fa-minus"></i> </button>
+</div>
+</div>
+<div class="card-body">
+<div id="search-term-report-grid_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-md-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 294.328px; padding-right: 0px;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" role="grid" style="margin-left: 0px; width: 294.328px;"><thead><tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 141.047px;">Keyword</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 102.281px;">Count</th></tr></thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" id="search-term-report-grid" role="grid" aria-describedby="search-term-report-grid_info" style="width: 100%;"><thead><tr role="row" style="height: 0px;"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 141.047px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Keyword</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 102.281px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Count</div></th></tr></thead>
+<tbody></tbody></table></div></div></div></div><div class="row margin-t-5"><div class="col-lg-10 col-xs-12"><div class="float-lg-left"><div class="dataTables_paginate paging_simple_numbers" id="search-term-report-grid_paginate"></div></div></div><div class="col-lg-2 col-xs-12"><div class="float-lg-right text-center"><div class="dataTables_info" id="search-term-report-grid_info" role="status" aria-live="polite"></div></div></div></div></div>
+</div>
+</div> </div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card card-primary card-outline " id="bestsellers-report-quantity-card">
+<div class="card-header with-border">
+<h3 class="card-title">
+<i class="fas fa-star"></i>
+Bestsellers by quantity
+</h3>
+<div class="card-tools float-right">
+<button type="button" class="btn btn-tool" data-card-widget="collapse">
+<i class="fas fa-minus"></i> </button>
+</div>
+</div>
+<div class="card-body">
+<div id="bestsellers-byquantity-grid_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-md-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 469px; padding-right: 0px;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" role="grid" style="margin-left: 0px; width: 469px;"><thead><tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 41.9844px;">Name</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 95.4062px;">Total quantity</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 151.359px;">Total amount (excl tax)</th><th class="sorting_disabled button-column" rowspan="1" colspan="1" style="width: 79.25px;">View</th></tr></thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" id="bestsellers-byquantity-grid" role="grid" aria-describedby="bestsellers-byquantity-grid_info" style="width: 100%;"><thead><tr role="row" style="height: 0px;"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 41.9844px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Name</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 95.4062px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Total quantity</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 151.359px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Total amount (excl tax)</div></th><th class="sorting_disabled button-column" rowspan="1" colspan="1" style="width: 79.25px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">View</div></th></tr></thead>
+<tbody></tbody></table></div></div></div></div><div class="row margin-t-5"><div class="col-lg-10 col-xs-12"><div class="float-lg-left"><div class="dataTables_paginate paging_simple_numbers" id="bestsellers-byquantity-grid_paginate"></div></div></div><div class="col-lg-2 col-xs-12"><div class="float-lg-right text-center"><div class="dataTables_info" id="bestsellers-byquantity-grid_info" role="status" aria-live="polite"></div></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card card-primary card-outline " id="bestsellers-report-amount-card">
+<div class="card-header with-border">
+<h3 class="card-title">
+<i class="far fa-star"></i>
+Bestsellers by amount
+</h3>
+<div class="card-tools float-right">
+<button type="button" class="btn btn-tool" data-card-widget="collapse">
+<i class="fas fa-minus"></i> </button>
+</div>
+</div>
+<div class="card-body">
+<div id="bestsellers-byamount-grid_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-md-12"><div class="dataTables_scroll"><div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;"><div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 469px; padding-right: 0px;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" role="grid" style="margin-left: 0px; width: 469px;"><thead><tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 41.9844px;">Name</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 95.4062px;">Total quantity</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 151.359px;">Total amount (excl tax)</th><th class="sorting_disabled button-column" rowspan="1" colspan="1" style="width: 79.25px;">View</th></tr></thead></table></div></div><div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;"><table class="table table-bordered table-hover table-striped dataTable no-footer" width="100%" id="bestsellers-byamount-grid" role="grid" aria-describedby="bestsellers-byamount-grid_info" style="width: 100%;"><thead><tr role="row" style="height: 0px;"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 41.9844px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Name</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 95.4062px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Total quantity</div></th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 151.359px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">Total amount (excl tax)</div></th><th class="sorting_disabled button-column" rowspan="1" colspan="1" style="width: 79.25px; padding-top: 0px; padding-bottom: 0px; border-top-width: 0px; border-bottom-width: 0px; height: 0px;"><div class="dataTables_sizing" style="height: 0px; overflow: hidden;">View</div></th></tr></thead>
+<tbody></tbody></table></div></div></div></div><div class="row margin-t-5"><div class="col-lg-10 col-xs-12"><div class="float-lg-left"><div class="dataTables_paginate paging_simple_numbers" id="bestsellers-byamount-grid_paginate"></div></div></div><div class="col-lg-2 col-xs-12"><div class="float-lg-right text-center"><div class="dataTables_info" id="bestsellers-byamount-grid_info" role="status" aria-live="polite"></div></div></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div id="loadOrderStatisticsAlert-action-alert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loadOrderStatisticsAlert-action-alert-title">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="loadOrderStatisticsAlert-action-alert-title">Information</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+<div class="modal-body">
+<div class="additional-text" id="loadOrderStatisticsAlert-info"></div>
+Failed to load statistics.
+</div>
+<div class="modal-footer">
+<span class="btn btn-primary float-right" data-dismiss="modal">Ok</span>
+</div>
+ </div>
+</div>
+<div class="btn btn-default" id="loadOrderStatisticsAlert" style="display:none" data-toggle="modal" data-target="#loadOrderStatisticsAlert-action-alert"></div><script>$(document).ready(function () {$('#loadOrderStatisticsAlert').attr("data-toggle", "modal").attr("data-target", "#loadOrderStatisticsAlert-action-alert")});</script></div>
+<div id="loadCustomerStatisticsAlert-action-alert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loadCustomerStatisticsAlert-action-alert-title" style="padding-right: 17px;">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="loadCustomerStatisticsAlert-action-alert-title">Information</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+</div>
+<div class="modal-body">
+<div class="additional-text" id="loadCustomerStatisticsAlert-info"></div>
+Failed to load statistics.
+</div>
+<div class="modal-footer">
+<span class="btn btn-primary float-right" data-dismiss="modal">Ok</span>
+</div>
+</div>
+</div>
+<div class="btn btn-default" id="loadCustomerStatisticsAlert" style="display:none" data-toggle="modal" data-target="#loadCustomerStatisticsAlert-action-alert"></div><script>$(document).ready(function () {$('#loadCustomerStatisticsAlert').attr("data-toggle", "modal").attr("data-target", "#loadCustomerStatisticsAlert-action-alert")});</script></div>
+</div>
+<div class="main-footer">
+<div class="container-fluid">
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-4 col-xs-12 text-md-left text-center">
+Powered by <a href="https://www.nopcommerce.com/?utm_source=demo-admin-panel&amp;utm_medium=footer&amp;utm_campaign=admin-panel" target="_blank">nopCommerce</a>
+</div>
+<div class="col-md-4 col-xs-12 text-center">
+Thursday, March 31, 2022 10:34 AM
+</div>
+<div class="col-md-4 col-xs-12 text-md-right text-center">
+<b>nopCommerce version 4.50.0</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a id="backTop" class="btn btn-back-top bg-teal"></a>
+<script type="text/javascript" src="/js/HomeIndex.Footer.scripts.js?v=p85S1lLwdXzndIrgTxy2jRef03c"></script><script type="text/javascript" src="/lib/kendo/2020.1.406/js/messages/kendo.messages.en-US.min.js?v=KNwmFaETNYZCiBVx3NSwe1lYysw"></script>
+<script type="text/javascript">
+            $(document).ready(function () {
+                $('#nopcommerce-news-box').on('click', 'button[data-widget="collapse"]', function () {
+                    var collapsed = !$('#nopcommerce-news-box').hasClass('collapsed-box');
+                    saveUserPreferences('/Admin/Preferences/SavePreference', 'HideNopCommerceNewsCard', collapsed);
+                });
+            });
+            </script>
+<script type="text/javascript">
+            $(document).ready(function () {
+                $('#nopcommerce-common-statistics-card').on('click', 'button[data-card-widget="collapse"]', function () {
+                    var collapsed = !$('#nopcommerce-common-statistics-card').hasClass('collapsed-card');
+                    saveUserPreferences('/Admin/Preferences/SavePreference', 'HideCommonStatisticsCard', collapsed);
+                });
+            });
+                </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var osCurrentPeriod;
+
+        $('#order-statistics-card').on('click', 'button[data-card-widget="collapse"]', function () {
+            var collapsed = !$('#order-statistics-card').hasClass('collapsed-card');
+            saveUserPreferences('/Admin/Preferences/SavePreference', 'Reports.HideOrderStatisticsCard', collapsed);
+            
+            if (!collapsed) {
+                $('#order-statistics-card button[data-chart-role="toggle-chart"]').removeAttr('disabled');
+                if (!osCurrentPeriod) {
+                    $('#order-statistics-card button[data-chart-role="toggle-chart"][data-chart-period="week"]').trigger('click');
+                }
+            } else {
+                $('#order-statistics-card button[data-chart-role="toggle-chart"]').attr('disabled', 'disabled');
+            }
+        });
+
+        var osConfig = {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [
+                    {
+                        label: "Orders",
+                        fillColor: "rgba(60,141,188,0.9)",
+                        strokeColor: "rgba(60,141,188,0.8)",
+                        pointColor: "#3b8bba",
+                        pointStrokeColor: "rgba(60,141,188,1)",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(60,141,188,1)",
+                        borderColor: 'rgba(60, 141, 188, 0.7)',
+                        backgroundColor: 'rgba(44, 152, 214, 0.5)',
+                        pointBorderColor: 'rgba(37, 103, 142, 0.9)',
+                        pointBackgroundColor: 'rgba(60, 141, 188, 0.4)',
+                        pointBorderWidth: 1,
+                        data: []
+                    }
+                ]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        ticks: {
+                            userCallback: function (dataLabel, index) {
+                                if (window.orderStatistics && window.orderStatistics.config.data.labels.length > 12) {
+                                    return index % 5 === 0 ? dataLabel : '';
+                                }
+                                return dataLabel;
+                            }
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            userCallback: function (dataLabel, index) {
+                                return (dataLabel ^ 0) === dataLabel ? dataLabel : '';
+                            },
+                            min: 0
+                        }
+                    }]
+                },
+                showScale: true,
+                scaleShowGridLines: false,
+                scaleGridLineColor: "rgba(0,0,0,.05)",
+                scaleGridLineWidth: 1,
+                scaleShowHorizontalLines: true,
+                scaleShowVerticalLines: true,
+                bezierCurve: true,
+                pointDot: false,
+                pointDotRadius: 4,
+                pointDotStrokeWidth: 1,
+                pointHitDetectionRadius: 20,
+                datasetStroke: true,
+                datasetFill: true,
+                maintainAspectRatio: false,
+                responsive: true
+            }
+        };
+
+        function changeOsPeriod(period) {
+            var osLabels = [];
+            var osData = [];
+
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "/Admin/Order/LoadOrderStatistics",
+                data: {
+                    period: period
+                },
+                success: function (data, textStatus, jqXHR) {
+                    for (var i = 0; i < data.length; i++) {
+                        osLabels.push(data[i].date);
+                        osData.push(data[i].value);
+                    }
+
+                    if (!window.orderStatistics) {
+                        osConfig.data.labels = osLabels;
+                        osConfig.data.datasets[0].data = osData;
+                        osConfig.data.scales =
+                        window.orderStatistics = new Chart(document.getElementById("order-statistics-chart").getContext("2d"), osConfig);
+                    } else {
+                        window.orderStatistics.config.data.labels = osLabels;
+                        window.orderStatistics.config.data.datasets[0].data = osData;
+                        window.orderStatistics.update();
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $("#loadOrderStatisticsAlert").click();
+                }
+            });
+        }
+
+        $('#order-statistics-card button[data-chart-role="toggle-chart"]').on('click', function () {
+            var period = $(this).attr('data-chart-period');
+            osCurrentPeriod = period;
+            changeOsPeriod(period);
+            $('#order-statistics-card button[data-chart-role="toggle-chart"]').removeClass('bg-light-blue');
+            $(this).addClass('bg-light-blue');
+        });
+
+
+                $('#order-statistics-card button[data-chart-role="toggle-chart"][data-chart-period="week"]').trigger('click');
+                });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var csCurrentPeriod;
+
+        $('#customer-statistics-card').on('click',  'button[data-card-widget="collapse"]', function () {
+            
+            var collapsed = !$('#customer-statistics-card').hasClass('collapsed-card');
+            saveUserPreferences('/Admin/Preferences/SavePreference', 'Reports.HideCustomerStatisticsCard', collapsed);
+                       
+            if (!collapsed) {
+                $('#customer-statistics-card button[data-chart-role="toggle-chart"]').removeAttr('disabled');
+                if (!csCurrentPeriod) {
+                    $('#customer-statistics-card button[data-chart-role="toggle-chart"][data-chart-period="week"]').trigger('click');
+                }
+            } else {
+                $('#customer-statistics-card button[data-chart-role="toggle-chart"]').attr('disabled', 'disabled');
+            }
+        });
+
+        var csConfig = {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [
+                    {
+                        label: "New customers",
+                        fillColor: "rgba(60,141,188,0.9)",
+                        strokeColor: "rgba(60,141,188,0.8)",
+                        pointColor: "#00a65a",
+                        pointStrokeColor: "rgba(0,166,90,1)",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(0,166,90,1)",
+                        borderColor: 'rgba(0,166,90, 1)',
+                        backgroundColor: 'rgba(0,166,90,0.5)',
+                        pointBorderColor: 'rgba(0,166,90,0.7)',
+                        pointBackgroundColor: 'rgba(0,166,90,0.2)',
+                        pointBorderWidth: 1,
+                        data: []
+                    }
+                ]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        ticks: {
+                            userCallback: function (dataLabel, index) {
+                                if (window.customerStatistics && window.customerStatistics.config.data.labels.length > 12) {
+                                    return index % 5 === 0 ? dataLabel : '';
+                                }
+                                return dataLabel;
+                            }
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            userCallback: function (dataLabel, index) {
+                                return (dataLabel ^ 0) === dataLabel ? dataLabel : '';
+                            },
+                            min: 0
+                        }
+                    }]
+                },
+                showScale: true,
+                scaleShowGridLines: false,
+                scaleGridLineColor: "rgba(0,0,0,.05)",
+                scaleGridLineWidth: 1,
+                scaleShowHorizontalLines: true,
+                scaleShowVerticalLines: true,
+                bezierCurve: true,
+                pointDot: false,
+                pointDotRadius: 4,
+                pointDotStrokeWidth: 1,
+                pointHitDetectionRadius: 20,
+                datasetStroke: true,
+                datasetFill: true,
+                maintainAspectRatio: false,
+                responsive: true
+            }
+        };
+
+        function changeCsPeriod(period) {
+            var csLabels = [];
+            var csData = [];
+
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "/Admin/Customer/LoadCustomerStatistics",
+                data: {
+                    period: period
+                },
+                success: function (data, textStatus, jqXHR) {
+                    for (var i = 0; i < data.length; i++) {
+                        csLabels.push(data[i].date);
+                        csData.push(data[i].value);
+                    }
+
+                    if (!window.customerStatistics) {
+                        csConfig.data.labels = csLabels;
+                        csConfig.data.datasets[0].data = csData;
+                        csConfig.data.scales =
+                        window.customerStatistics = new Chart(document.getElementById("customer-statistics-chart").getContext("2d"), csConfig);
+                    } else {
+                        window.customerStatistics.config.data.labels = csLabels;
+                        window.customerStatistics.config.data.datasets[0].data = csData;
+                        window.customerStatistics.update();
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    $("#loadCustomerStatisticsAlert").click();
+                }
+            });
+        }
+
+        $('#customer-statistics-card button[data-chart-role="toggle-chart"]').on('click', function () {
+            var period = $(this).attr('data-chart-period');
+            csCurrentPeriod = period;
+            changeCsPeriod(period);
+            $('#customer-statistics-card button[data-chart-role="toggle-chart"]').removeClass('bg-light-blue');
+            $(this).addClass('bg-light-blue');
+        });
+
+
+                $('#customer-statistics-card button[data-chart-role="toggle-chart"][data-chart-period="week"]').trigger('click');
+                });
+</script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#order-average-report-card').on('click', 'button[data-card-widget="collapse"]', function () {
+                var collapsed = !$('#order-average-report-card').hasClass('collapsed-card');
+                saveUserPreferences('/Admin/Preferences/SavePreference', 'Reports.HideOrderAverageReportCard', collapsed);
+            });
+        });
+    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#average-order-report-grid').DataTable({
+            
+
+
+
+
+    processing: true,
+    
+    serverSide: true,
+    
+    ajax:
+    {
+        url: "/Admin/Order/OrderAverageReportList",
+        type: "POST",
+        dataType: "json",
+        dataSrc: "Data",
+        beforeSend: function() {
+        },
+        data: function(data) {
+            addAntiForgeryToken(data);
+            return data;
+        }
+    },
+    scrollX: true,
+info: false,
+paging: false,
+pagingType: 'simple_numbers',
+language: {
+    "emptyTable":     "No data available in table",
+    "info":           "_START_-_END_ of _TOTAL_ items",
+    "infoEmpty":      "No records",
+    "infoFiltered":   "(filtered from _MAX_ total entries)",
+    "thousands":      ",",
+    "lengthMenu":     "Show _MENU_ items",
+    "loadingRecords": "Loading...",
+    "processing":     "\u003Ci class=\u0027fas fa-refresh fa-spin\u0027\u003E\u003C/i\u003E",
+    "search":         "Search:",
+    "zeroRecords":    "No matching records found",
+    "paginate": {
+
+                "first":"<i class='k-icon k-i-seek-w'></i>",
+                "last":"<i class='k-icon k-i-seek-e'></i>",
+                "next":"<i class='k-icon k-i-arrow-e'></i>",
+                "previous":"<i class='k-icon k-i-arrow-w'></i>"
+                },
+    "aria": {
+        "sortAscending":  ": activate to sort column ascending",
+        "sortDescending": ": activate to sort column descending"
+    }
+},
+pageLength: 2147483647,
+
+    lengthChange: false,
+    ordering: false,
+
+    buttons: [{
+        name: 'refresh',
+        text: '<i class="fas fa-sync-alt" style="padding-left: 5px"></i>',
+        action: function() {
+
+                updateTable('#average-order-report-grid', false);
+                        }
+    }],
+    dom: '\u003C\u0027row\u0027\u003C\u0027col-md-12\u0027t\u003E\u003E\u003C\u0027row margin-t-5\u0027\u003C\u0027col-lg-5 col-xs-12\u0027\u003C\u0027float-lg-left\u0027p\u003E\u003E\u003C\u0027col-lg-3 col-xs-12\u0027\u003C\u0027text-center\u0027l\u003E\u003E\u003C\u0027col-lg-3 col-xs-12\u0027\u003C\u0027float-lg-right text-center\u0027i\u003E\u003E\u003C\u0027col-lg-1 col-xs-12\u0027\u003C\u0027float-lg-right text-center data-tables-refresh\u0027B\u003E\u003E\u003E',
+columns: [    
+
+        {            
+
+                title: 'Order Status',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'OrderStatus'            
+        }
+,        
+        {            
+
+                title: 'Today',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'SumTodayOrders'            
+        }
+,        
+        {            
+
+                title: 'This Week',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'SumThisWeekOrders'            
+        }
+,        
+        {            
+
+                title: 'This Month',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'SumThisMonthOrders'            
+        }
+,        
+        {            
+
+                title: 'This Year',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'SumThisYearOrders'            
+        }
+,        
+        {            
+
+                title: 'All time',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'SumAllTimeOrders'            
+        }
+        ]           
+        });
+
+        $('#average-order-report-grid').DataTable().columns.adjust();
+
+    });
+</script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#order-incomplete-report-card').on('click', 'button[data-card-widget="collapse"]', function () {
+                var collapsed = !$('#order-incomplete-report-card').hasClass('collapsed-card');
+                saveUserPreferences('/Admin/Preferences/SavePreference', 'Reports.HideOrderIncompleteReportCard', collapsed);
+            });
+        });
+    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#incomplete-order-report-grid').DataTable({
+            
+
+
+
+
+    processing: true,
+    
+    serverSide: true,
+    
+    ajax:
+    {
+        url: "/Admin/Order/OrderIncompleteReportList",
+        type: "POST",
+        dataType: "json",
+        dataSrc: "Data",
+        beforeSend: function() {
+        },
+        data: function(data) {
+            addAntiForgeryToken(data);
+            return data;
+        }
+    },
+    scrollX: true,
+info: false,
+paging: false,
+pagingType: 'simple_numbers',
+language: {
+    "emptyTable":     "No data available in table",
+    "info":           "_START_-_END_ of _TOTAL_ items",
+    "infoEmpty":      "No records",
+    "infoFiltered":   "(filtered from _MAX_ total entries)",
+    "thousands":      ",",
+    "lengthMenu":     "Show _MENU_ items",
+    "loadingRecords": "Loading...",
+    "processing":     "\u003Ci class=\u0027fas fa-refresh fa-spin\u0027\u003E\u003C/i\u003E",
+    "search":         "Search:",
+    "zeroRecords":    "No matching records found",
+    "paginate": {
+
+                "first":"<i class='k-icon k-i-seek-w'></i>",
+                "last":"<i class='k-icon k-i-seek-e'></i>",
+                "next":"<i class='k-icon k-i-arrow-e'></i>",
+                "previous":"<i class='k-icon k-i-arrow-w'></i>"
+                },
+    "aria": {
+        "sortAscending":  ": activate to sort column ascending",
+        "sortDescending": ": activate to sort column descending"
+    }
+},
+pageLength: 2147483647,
+
+    lengthChange: false,
+    ordering: false,
+
+    buttons: [{
+        name: 'refresh',
+        text: '<i class="fas fa-sync-alt" style="padding-left: 5px"></i>',
+        action: function() {
+
+                updateTable('#incomplete-order-report-grid', false);
+                        }
+    }],
+    dom: '\u003C\u0027row\u0027\u003C\u0027col-md-12\u0027t\u003E\u003E\u003C\u0027row margin-t-5\u0027\u003C\u0027col-lg-5 col-xs-12\u0027\u003C\u0027float-lg-left\u0027p\u003E\u003E\u003C\u0027col-lg-3 col-xs-12\u0027\u003C\u0027text-center\u0027l\u003E\u003E\u003C\u0027col-lg-3 col-xs-12\u0027\u003C\u0027float-lg-right text-center\u0027i\u003E\u003E\u003C\u0027col-lg-1 col-xs-12\u0027\u003C\u0027float-lg-right text-center data-tables-refresh\u0027B\u003E\u003E\u003E',
+columns: [    
+
+        {            
+
+                title: 'Item',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'Item'            
+        }
+,        
+        {            
+
+                title: 'Total',
+                            width: '50',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'Total'            
+        }
+,        
+        {            
+
+                title: 'Count',
+                            width: '120',
+            visible: true,
+            searchable: false,
+
+                className: 'button-column',
+                
+                    render: function (data, type, row, meta) {
+                        return renderColumnOrderIncompleteReportCount(data, type, row, meta);
+                    },
+                                data: 'Count'            
+        }
+        ]           
+        });
+
+        $('#incomplete-order-report-grid').DataTable().columns.adjust();
+
+    });
+</script>
+<script type="text/javascript">
+            function renderColumnOrderIncompleteReportCount(data, type, row, meta) {
+                return '<a class="btn btn-default" href="' + row.ViewLink +'"><i class="far fa-eye"></i>' + row.Count + ' - view all</a>';
+            }
+        </script>
+<script type="text/javascript">
+            $(document).ready(function () {
+                $('#latest-orders-card').on('click', 'button[data-card-widget="collapse"]', function () {
+                    var collapsed = !$('#latest-orders-card').hasClass('collapsed-card');
+                    saveUserPreferences('/Admin/Preferences/SavePreference', 'Reports.HideLatestOrdersCard', collapsed);
+                });
+            });
+        </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#orders-grid').DataTable({
+            
+
+
+
+
+    processing: true,
+    
+    serverSide: true,
+    
+    ajax:
+    {
+        url: "/Admin/Order/OrderList",
+        type: "POST",
+        dataType: "json",
+        dataSrc: "Data",
+        beforeSend: function() {
+        },
+        data: function(data) {
+            addAntiForgeryToken(data);
+            return data;
+        }
+    },
+    scrollX: true,
+info: true,
+paging: true,
+pagingType: 'simple_numbers',
+language: {
+    "emptyTable":     "No data available in table",
+    "info":           "_START_-_END_ of _TOTAL_ items",
+    "infoEmpty":      "No records",
+    "infoFiltered":   "(filtered from _MAX_ total entries)",
+    "thousands":      ",",
+    "lengthMenu":     "Show _MENU_ items",
+    "loadingRecords": "Loading...",
+    "processing":     "\u003Ci class=\u0027fas fa-refresh fa-spin\u0027\u003E\u003C/i\u003E",
+    "search":         "Search:",
+    "zeroRecords":    "No matching records found",
+    "paginate": {
+
+                "first":"<i class='k-icon k-i-seek-w'></i>",
+                "last":"<i class='k-icon k-i-seek-e'></i>",
+                "next":"<i class='k-icon k-i-arrow-e'></i>",
+                "previous":"<i class='k-icon k-i-arrow-w'></i>"
+                },
+    "aria": {
+        "sortAscending":  ": activate to sort column ascending",
+        "sortDescending": ": activate to sort column descending"
+    }
+},
+pageLength: 5,
+
+    lengthChange: false,
+    ordering: false,
+
+    buttons: [{
+        name: 'refresh',
+        text: '<i class="fas fa-sync-alt" style="padding-left: 5px"></i>',
+        action: function() {
+
+                updateTable('#orders-grid', false);
+                        }
+    }],
+    dom: '\u003C\u0027row\u0027\u003C\u0027col-md-12\u0027t\u003E\u003E\u003C\u0027row margin-t-5\u0027\u003C\u0027col-lg-10 col-xs-12\u0027\u003C\u0027float-lg-left\u0027p\u003E\u003E\u003C\u0027col-lg-2 col-xs-12\u0027\u003C\u0027float-lg-right text-center\u0027i\u003E\u003E\u003E',
+columns: [    
+
+        {            
+
+                title: 'Order #',
+                            width: '80',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'CustomOrderNumber'            
+        }
+,        
+        {            
+
+                title: 'Order status',
+                            width: '100',
+            visible: true,
+            searchable: false,
+
+                    render: function (data, type, row, meta) {
+                        return renderColumnOrderStatus(data, type, row, meta);
+                    },
+                                data: 'OrderStatus'            
+        }
+,        
+        {            
+
+                title: 'Customer',
+                            width: '250',
+            visible: true,
+            searchable: false,
+
+                    render: function (data, type, row, meta) {
+                        return renderColumnCustomerEmail(data, type, row, meta);
+                    },
+                                data: 'CustomerEmail'            
+        }
+,        
+        {            
+
+                title: 'Created on',
+                            width: '100',
+            visible: true,
+            searchable: false,
+
+                    render: function (data, type, row, meta) {
+                        return (data) ? moment(data).locale('en-US').format('L LTS') : null;
+                    },
+                                data: 'CreatedOn'            
+        }
+,        
+        {            
+
+                title: 'View',
+                            width: '50',
+            visible: true,
+            searchable: false,
+
+                className: 'button-column',
+                
+                    render: function (data, type, row, meta) {
+                        return '<a class="btn btn-default" href="/Admin/Order/Edit/' + data + '"><i class="far fa-eye"></i>View</a>';
+                    },
+                                data: 'Id'            
+        }
+        ]           
+        });
+
+        $('#orders-grid').DataTable().columns.adjust();
+
+    });
+</script>
+<script type="text/javascript">
+            function renderColumnCustomerEmail(data, type, row, meta) {
+                var textRenderer = $.fn.dataTable.render.text().display;
+                return textRenderer(row.CustomerFullName) + ' (' + textRenderer(row.CustomerEmail) + ')';
+            }
+
+            function renderColumnOrderStatus(data, type, row, meta) {
+                var color;
+                switch (row.OrderStatusId) {
+                    case 10:
+                        color = 'yellow';
+                        break;
+                    case 20:
+                        color = 'blue';
+                        break;
+                    case 30:
+                        color = 'green';
+                        break;
+                    case 40:
+                        color = 'red';
+                        break;
+                }
+                return '<span class="grid-report-item ' + color + '">' + data + '</span >';
+            }
+        </script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#popular-search-terms-card').on('click', 'button[data-card-widget="collapse"]', function () {
+                var collapsed = !$('#popular-search-terms-card').hasClass('collapsed-card');
+                saveUserPreferences('/Admin/Preferences/SavePreference', 'Reports.HidePopularSearchTermsReport', collapsed);
+            });
+        });
+    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#search-term-report-grid').DataTable({
+            
+
+
+
+
+    processing: true,
+    
+    serverSide: true,
+    
+    ajax:
+    {
+        url: "/Admin/Common/PopularSearchTermsReport",
+        type: "POST",
+        dataType: "json",
+        dataSrc: "Data",
+        beforeSend: function() {
+        },
+        data: function(data) {
+            addAntiForgeryToken(data);
+            return data;
+        }
+    },
+    scrollX: true,
+info: true,
+paging: true,
+pagingType: 'simple_numbers',
+language: {
+    "emptyTable":     "No data available in table",
+    "info":           "_START_-_END_ of _TOTAL_ items",
+    "infoEmpty":      "No records",
+    "infoFiltered":   "(filtered from _MAX_ total entries)",
+    "thousands":      ",",
+    "lengthMenu":     "Show _MENU_ items",
+    "loadingRecords": "Loading...",
+    "processing":     "\u003Ci class=\u0027fas fa-refresh fa-spin\u0027\u003E\u003C/i\u003E",
+    "search":         "Search:",
+    "zeroRecords":    "No matching records found",
+    "paginate": {
+
+                "first":"<i class='k-icon k-i-seek-w'></i>",
+                "last":"<i class='k-icon k-i-seek-e'></i>",
+                "next":"<i class='k-icon k-i-arrow-e'></i>",
+                "previous":"<i class='k-icon k-i-arrow-w'></i>"
+                },
+    "aria": {
+        "sortAscending":  ": activate to sort column ascending",
+        "sortDescending": ": activate to sort column descending"
+    }
+},
+pageLength: 5,
+
+    lengthChange: false,
+    ordering: false,
+
+    buttons: [{
+        name: 'refresh',
+        text: '<i class="fas fa-sync-alt" style="padding-left: 5px"></i>',
+        action: function() {
+
+                updateTable('#search-term-report-grid', false);
+                        }
+    }],
+    dom: '\u003C\u0027row\u0027\u003C\u0027col-md-12\u0027t\u003E\u003E\u003C\u0027row margin-t-5\u0027\u003C\u0027col-lg-10 col-xs-12\u0027\u003C\u0027float-lg-left\u0027p\u003E\u003E\u003C\u0027col-lg-2 col-xs-12\u0027\u003C\u0027float-lg-right text-center\u0027i\u003E\u003E\u003E',
+columns: [    
+
+        {            
+
+                title: 'Keyword',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'Keyword'            
+        }
+,        
+        {            
+
+                title: 'Count',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'Count'            
+        }
+        ]           
+        });
+
+        $('#search-term-report-grid').DataTable().columns.adjust();
+
+    });
+</script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#bestsellers-report-quantity-card').on('click', 'button[data-card-widget="collapse"]', function () {
+                var collapsed = !$('#bestsellers-report-quantity-card').hasClass('collapsed-card');
+                saveUserPreferences('/Admin/Preferences/SavePreference', 'Reports.HideBestsellersBriefReportByQuantityCard', collapsed);
+            });
+        });
+    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#bestsellers-byquantity-grid').DataTable({
+            
+
+
+
+
+    processing: true,
+    
+    serverSide: true,
+    
+    ajax:
+    {
+        url: "/Admin/Order/BestsellersBriefReportByQuantityList?OrderBy=OrderByQuantity",
+        type: "POST",
+        dataType: "json",
+        dataSrc: "Data",
+        beforeSend: function() {
+        },
+        data: function(data) {
+            addAntiForgeryToken(data);
+            return data;
+        }
+    },
+    scrollX: true,
+info: true,
+paging: true,
+pagingType: 'simple_numbers',
+language: {
+    "emptyTable":     "No data available in table",
+    "info":           "_START_-_END_ of _TOTAL_ items",
+    "infoEmpty":      "No records",
+    "infoFiltered":   "(filtered from _MAX_ total entries)",
+    "thousands":      ",",
+    "lengthMenu":     "Show _MENU_ items",
+    "loadingRecords": "Loading...",
+    "processing":     "\u003Ci class=\u0027fas fa-refresh fa-spin\u0027\u003E\u003C/i\u003E",
+    "search":         "Search:",
+    "zeroRecords":    "No matching records found",
+    "paginate": {
+
+                "first":"<i class='k-icon k-i-seek-w'></i>",
+                "last":"<i class='k-icon k-i-seek-e'></i>",
+                "next":"<i class='k-icon k-i-arrow-e'></i>",
+                "previous":"<i class='k-icon k-i-arrow-w'></i>"
+                },
+    "aria": {
+        "sortAscending":  ": activate to sort column ascending",
+        "sortDescending": ": activate to sort column descending"
+    }
+},
+pageLength: 5,
+
+    lengthChange: false,
+    ordering: false,
+
+    buttons: [{
+        name: 'refresh',
+        text: '<i class="fas fa-sync-alt" style="padding-left: 5px"></i>',
+        action: function() {
+
+                updateTable('#bestsellers-byquantity-grid', false);
+                        }
+    }],
+    dom: '\u003C\u0027row\u0027\u003C\u0027col-md-12\u0027t\u003E\u003E\u003C\u0027row margin-t-5\u0027\u003C\u0027col-lg-10 col-xs-12\u0027\u003C\u0027float-lg-left\u0027p\u003E\u003E\u003C\u0027col-lg-2 col-xs-12\u0027\u003C\u0027float-lg-right text-center\u0027i\u003E\u003E\u003E',
+columns: [    
+
+        {            
+
+                title: 'Name',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'ProductName'            
+        }
+,        
+        {            
+
+                title: 'Total quantity',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'TotalQuantity'            
+        }
+,        
+        {            
+
+                title: 'Total amount (excl tax)',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'TotalAmount'            
+        }
+,        
+        {            
+
+                title: 'View',
+                            width: '80',
+            visible: true,
+            searchable: false,
+
+                className: 'button-column',
+                
+                    render: function (data, type, row, meta) {
+                        return '<a class="btn btn-default" href="/Admin/Product/Edit/' + data + '"><i class="far fa-eye"></i>View</a>';
+                    },
+                                data: 'ProductId'            
+        }
+        ]           
+        });
+
+        $('#bestsellers-byquantity-grid').DataTable().columns.adjust();
+
+    });
+</script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#bestsellers-report-amount-card').on('click', 'button[data-card-widget="collapse"]', function () {
+                var collapsed = !$('#bestsellers-report-amount-card').hasClass('collapsed-card');
+                saveUserPreferences('/Admin/Preferences/SavePreference', 'Reports.HideBestsellersBriefReportByAmountCard', collapsed);
+            });
+        });
+    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#bestsellers-byamount-grid').DataTable({
+            
+
+
+
+
+    processing: true,
+    
+    serverSide: true,
+    
+    ajax:
+    {
+        url: "/Admin/Order/BestsellersBriefReportByAmountList?OrderBy=OrderByTotalAmount",
+        type: "POST",
+        dataType: "json",
+        dataSrc: "Data",
+        beforeSend: function() {
+        },
+        data: function(data) {
+            addAntiForgeryToken(data);
+            return data;
+        }
+    },
+    scrollX: true,
+info: true,
+paging: true,
+pagingType: 'simple_numbers',
+language: {
+    "emptyTable":     "No data available in table",
+    "info":           "_START_-_END_ of _TOTAL_ items",
+    "infoEmpty":      "No records",
+    "infoFiltered":   "(filtered from _MAX_ total entries)",
+    "thousands":      ",",
+    "lengthMenu":     "Show _MENU_ items",
+    "loadingRecords": "Loading...",
+    "processing":     "\u003Ci class=\u0027fas fa-refresh fa-spin\u0027\u003E\u003C/i\u003E",
+    "search":         "Search:",
+    "zeroRecords":    "No matching records found",
+    "paginate": {
+
+                "first":"<i class='k-icon k-i-seek-w'></i>",
+                "last":"<i class='k-icon k-i-seek-e'></i>",
+                "next":"<i class='k-icon k-i-arrow-e'></i>",
+                "previous":"<i class='k-icon k-i-arrow-w'></i>"
+                },
+    "aria": {
+        "sortAscending":  ": activate to sort column ascending",
+        "sortDescending": ": activate to sort column descending"
+    }
+},
+pageLength: 5,
+
+    lengthChange: false,
+    ordering: false,
+
+    buttons: [{
+        name: 'refresh',
+        text: '<i class="fas fa-sync-alt" style="padding-left: 5px"></i>',
+        action: function() {
+
+                updateTable('#bestsellers-byamount-grid', false);
+                        }
+    }],
+    dom: '\u003C\u0027row\u0027\u003C\u0027col-md-12\u0027t\u003E\u003E\u003C\u0027row margin-t-5\u0027\u003C\u0027col-lg-10 col-xs-12\u0027\u003C\u0027float-lg-left\u0027p\u003E\u003E\u003C\u0027col-lg-2 col-xs-12\u0027\u003C\u0027float-lg-right text-center\u0027i\u003E\u003E\u003E',
+columns: [    
+
+        {            
+
+                title: 'Name',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'ProductName'            
+        }
+,        
+        {            
+
+                title: 'Total quantity',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'TotalQuantity'            
+        }
+,        
+        {            
+
+                title: 'Total amount (excl tax)',
+                            width: '',
+            visible: true,
+            searchable: false,
+
+                render: function (data, type, row, meta) {
+                    return escapeHtml(data);
+                },
+                            data: 'TotalAmount'            
+        }
+,        
+        {            
+
+                title: 'View',
+                            width: '80',
+            visible: true,
+            searchable: false,
+
+                className: 'button-column',
+                
+                    render: function (data, type, row, meta) {
+                        return '<a class="btn btn-default" href="/Admin/Product/Edit/' + data + '"><i class="far fa-eye"></i>View</a>';
+                    },
+                                data: 'ProductId'            
+        }
+        ]           
+        });
+
+        $('#bestsellers-byamount-grid').DataTable().columns.adjust();
+
+    });
+</script>
+<script type="text/javascript">
+        var rootAppPath = '/';
+        var culture = "en";
+
+        //load cldr for current culture
+        $.when(
+            $.get({ url: rootAppPath + "lib_npm/cldr-data/supplemental/likelySubtags.json", dataType: "json"}),
+            $.get({ url: rootAppPath + "lib_npm/cldr-data/main/" + culture + "/numbers.json", dataType: "json"}),
+            $.get({ url: rootAppPath + "lib_npm/cldr-data/main/" + culture + "/currencies.json", dataType: "json"}),
+            $.get({ url: rootAppPath + "lib_npm/cldr-data/supplemental/numberingSystems.json", dataType: "json"}),
+            $.get({ url: rootAppPath + "lib_npm/cldr-data/main/" + culture + "/ca-gregorian.json", dataType: "json"}),
+            $.get({ url: rootAppPath + "lib_npm/cldr-data/main/" + culture + "/timeZoneNames.json", dataType: "json"}),
+            $.get({ url: rootAppPath + "lib_npm/cldr-data/supplemental/timeData.json", dataType: "json"}),
+            $.get({ url: rootAppPath + "lib_npm/cldr-data/supplemental/weekData.json", dataType: "json"}),
+        ).then(function () {
+            // Normalize $.get results, we only need the JSON, not the request statuses.
+            return [].slice.apply(arguments, [0]).map(function (result) {
+                return result[0];
+            });
+        }).then(Globalize.load).then(function () {
+            Globalize.locale(culture);
+        });
+</script>
+<script type="text/javascript">
+        kendo.culture("en-US");
+</script>
+<script type="text/javascript">
+                            $(document).ready(function () {
+                                Admin.Search.init();
+                            });
+                        </script>
+<script type="text/javascript">
+        var AdminLTEOptions = {
+            boxWidgetOptions: {
+                boxWidgetIcons: {
+                    collapse: 'fa-minus',
+                    open: 'fa-plus'
+                }
+            }
+        };
+    </script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            //enable "back top" arrow
+            $('#backTop').backTop();
+
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-7490022-3', 'nopcommerce.com');
+            ga('send', 'pageview');
+
+            //enable tooltips
+            $('[data-toggle="tooltip"]').tooltip({ placement: 'bottom' });
+        });
+    </script>
+
+<div class="modal-backdrop fade show"></div></body></html>

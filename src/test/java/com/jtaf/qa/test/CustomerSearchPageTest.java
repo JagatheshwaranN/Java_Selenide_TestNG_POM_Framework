@@ -10,13 +10,10 @@ import com.jtaf.qa.pages.HomePage;
 import com.jtaf.qa.pages.LoginPage;
 
 /**
- * 
  * @implNote This class contains the customer search page test functionality.
- * 
  * @author Jaga
  * @since 09-03-2022
  * @version v0.3
- *
  */
 public class CustomerSearchPageTest extends TestBase {
 	

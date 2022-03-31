@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-testNGSuite">
-              <span class="suite-name border-passed">testNGSuite</span>
+              <span class="suite-name border-failed">testNGSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-testNGSuite" class="hide-methods passed suite-testNGSuite"> (hide)</a> <!-- hide-methods passed suite-testNGSuite -->
-                      <a href="#" panel-name="suite-testNGSuite" class="show-methods passed suite-testNGSuite"> (show)</a> <!-- show-methods passed suite-testNGSuite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-testNGSuite" class="hide-methods failed suite-testNGSuite"> (hide)</a> <!-- hide-methods failed suite-testNGSuite -->
+                      <a href="#" panel-name="suite-testNGSuite" class="show-methods failed suite-testNGSuite"> (show)</a> <!-- show-methods failed suite-testNGSuite -->
                     </span>
-                    <div class="method-list-content passed suite-testNGSuite">
+                    <div class="method-list-content failed suite-testNGSuite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-testNGSuite" title="com.jtaf.qa.test.CustomerSearchPageTest" hash-for-method="verifyCustomerSearchTest">verifyCustomerSearchTest</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-testNGSuite" title="com.jtaf.qa.test.HomePageTest" hash-for-method="verifyHomePageTest">verifyHomePageTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-testNGSuite -->
+                    </div> <!-- method-list-content failed suite-testNGSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,21 +117,61 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-testNGSuite" class="panel testNGSuite">
-          <div class="suite-testNGSuite-class-passed">
+          <div class="suite-testNGSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.jtaf.qa.test.CustomerSearchPageTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.jtaf.qa.test.HomePageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyCustomerSearchTest">
-                  </a> <!-- verifyCustomerSearchTest -->
-                  <span class="method-name">verifyCustomerSearchTest</span>
+                  <a name="verifyHomePageTest">
+                  </a> <!-- verifyHomePageTest -->
+                  <span class="method-name">verifyHomePageTest</span>
+                  <div class="stack-trace">TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+Screenshot: file:/D:/Eclipse_Env/Workspace/JavaSelenideTestNGPOMFramework/build/reports/tests/1648740859280.0.png
+Page source: file:/D:/Eclipse_Env/Workspace/JavaSelenideTestNGPOMFramework/build/reports/tests/1648740859280.0.html
+Timeout: 4 s.
+Caused by: TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+	at com.codeborne.selenide.ex.UIAssertionError.wrapToUIAssertionError(UIAssertionError.java:103)
+	at com.codeborne.selenide.ex.UIAssertionError.wrapThrowable(UIAssertionError.java:86)
+	at com.codeborne.selenide.ex.UIAssertionError.wrap(UIAssertionError.java:80)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:93)
+	at com.sun.proxy.$Proxy18.click(Unknown Source)
+	at com.jtaf.qa.pages.LoginPage.doLogin(LoginPage.java:50)
+	at com.jtaf.qa.test.HomePageTest.verifyHomePageTest(HomePageTest.java:24)
+Caused by: org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=99.0.4844.84)
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;JAGA-LAPTOP&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f4cd124db30a304ba239b80b6f2795cd, clickElement {id=5e2c88ef-759e-4437-a99a-c84da279d5fc}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\Jaga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:6499}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:6499/devtool..., se:cdpVersion: 99.0.4844.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (f4cd124db30a304ba239b80b6f2795cd)] -&gt; xpath: //button[text()=&apos;Log in&apos;]]
+Session ID: f4cd124db30a304ba239b80b6f2795cd
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.codeborne.selenide.commands.Click.defaultClick(Click.java:73)
+	at com.codeborne.selenide.commands.Click.click(Click.java:52)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:29)
+	at com.codeborne.selenide.commands.Click.execute(Click.java:19)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:154)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
+	... 28 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-testNGSuite-class-passed -->
+          </div> <!-- suite-testNGSuite-class-failed -->
         </div> <!-- panel testNGSuite -->
         <div panel-name="test-xml-testNGSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -142,12 +182,12 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;testNGSuite&quot;&gt;
-  &lt;test thread-count=&quot;1&quot; name=&quot;CustomerSearchPageTest&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; name=&quot;HomePageTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.jtaf.qa.test.CustomerSearchPageTest&quot;/&gt;
+      &lt;class name=&quot;com.jtaf.qa.test.HomePageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- CustomerSearchPageTest --&gt;
+  &lt;/test&gt; &lt;!-- HomePageTest --&gt;
 &lt;/suite&gt; &lt;!-- testNGSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -159,7 +199,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">CustomerSearchPageTest (1 class)</span>
+                <span class="test-name">HomePageTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,14 +227,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyCustomerSearchTest')
-data.setCell(0, 2, 'com.jtaf.qa.test.CustomerSearchPageTest')
-data.setCell(0, 3, 10101);
+data.setCell(0, 1, 'verifyHomePageTest')
+data.setCell(0, 2, 'com.jtaf.qa.test.HomePageTest')
+data.setCell(0, 3, 41331);
 window.suiteTableData['testNGSuite']= { tableData: data, tableDiv: 'times-div-testNGSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 41 seconds</span>
               <div id="times-div-testNGSuite">
               </div> <!-- times-div-testNGSuite -->
             </div> <!-- times-div -->
@@ -220,26 +260,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.jtaf.qa.test.CustomerSearchPageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.jtaf.qa.test.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">init</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest(chrome)</span>
-                <span class="method-start">50 ms</span>
+                <span class="method-start">47 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyCustomerSearchTest</span>
-                <span class="method-start">7930 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyHomePageTest</span>
+                <span class="method-start">20939 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">18033 ms</span>
+                <span class="method-start">62279 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">exit</span>
-                <span class="method-start">18200 ms</span>
+                <span class="method-start">62666 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

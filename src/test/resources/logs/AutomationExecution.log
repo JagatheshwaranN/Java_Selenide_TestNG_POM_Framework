@@ -1,0 +1,4 @@
+31-03-2022 21:03:108 INFO  TestBase :44 - ======================== [ Property file load is successful ] ========================
+31-03-2022 21:03:166 INFO  TestBase :58 - ======================== [ Launching chrome Browser] ==============================
+31-03-2022 21:03:06 INFO  TestBase :70 - Driver Information ===> ChromeDriver: chrome on WINDOWS (f4cd124db30a304ba239b80b6f2795cd)
+31-03-2022 21:03:46 INFO  LoginPage :47 - The application login page is displayed

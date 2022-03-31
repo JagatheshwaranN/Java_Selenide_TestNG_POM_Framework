@@ -9,13 +9,10 @@ import com.jtaf.qa.pages.HomePage;
 import com.jtaf.qa.pages.LoginPage;
 
 /**
- * 
  * @implNote This class contains the home page test functionality.
- * 
  * @author Jaga
  * @since 09-03-2022
  * @version v0.2
- *
  */
 public class HomePageTest extends TestBase {
 	

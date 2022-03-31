@@ -6,14 +6,11 @@ import com.codeborne.selenide.SelenideElement;
 import com.jtaf.qa.utilties.LoggerUtility;
 
 /**
- * 
  * @implNote This class contains the components that handle the element
  *           verification functions.
- * 
  * @author Jaga
  * @since 05-03-2022
  * @version v0.1
- *
  */
 public class VerificationHelper extends LoggerUtility {
 

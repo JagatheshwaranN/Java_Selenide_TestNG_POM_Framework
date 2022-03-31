@@ -8,14 +8,11 @@ import java.util.Properties;
 import org.apache.log4j.Logger;
 
 /**
- * 
  * @implNote This class contains the File Reader utility used to read the data
- *           from the property files.
- *           
+ *           from the property files.          
  * @author Jaga
- * @since 09-03-2022
- * @version v0.3
- *
+ * @since 31-03-2022
+ * @version v0.4
  */
 public class FileReaderUtility extends LoggerUtility {
 
@@ -28,6 +25,10 @@ public class FileReaderUtility extends LoggerUtility {
 	private static String propertyFilePath = "//src//main//resources//configurations//";
 	private static String testConfigFile = "TestConfig.properties";
 
+	/**
+	 * This method is used to load the property file.
+	 * @throws IOException
+	 */
 	public void loadPropertyFile() throws IOException {
 		try {
 			properties = new Properties();
@@ -48,10 +49,15 @@ public class FileReaderUtility extends LoggerUtility {
 		}
 	}
 
-	public String getTestData(String property) {
+	/**
+	 * This method is used to get the data from the property file.
+	 * @param key
+	 * @return propertyFileData
+	 */
+	public String getTestData(String key) {
 		String dataFromPropFile = null;
 		try {
-			dataFromPropFile = properties.getProperty(property).trim();
+			dataFromPropFile = properties.getProperty(key).trim();
 		} catch (Exception ex) {
 			log.info("Error occured while get the data from the property file" + "\n" + ex);
 		}

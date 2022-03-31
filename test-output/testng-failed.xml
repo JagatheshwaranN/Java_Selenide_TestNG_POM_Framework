@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [testNGSuite]">
+  <test thread-count="1" name="HomePageTest(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.jtaf.qa.test.LoginPageTest">
+      <class name="com.jtaf.qa.test.HomePageTest">
         <methods>
-          <include name="verifyLoginTest"/>
           <include name="init"/>
           <include name="exit"/>
           <include name="tearDown"/>
+          <include name="verifyHomePageTest"/>
           <include name="setUpTest"/>
         </methods>
-      </class> <!-- com.jtaf.qa.test.LoginPageTest -->
+      </class> <!-- com.jtaf.qa.test.HomePageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- HomePageTest(failed) -->
+</suite> <!-- Failed suite [testNGSuite] -->

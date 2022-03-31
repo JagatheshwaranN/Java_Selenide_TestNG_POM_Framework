@@ -7,14 +7,11 @@ import org.testng.Assert;
 import com.jtaf.qa.objects.CustomerSearchPageObject;
 
 /**
- * 
  * @implNote This class contains the customer search page functionalities used
- *           for the application under test.
- *           
+ *           for the application under test.          
  * @author Jaga
  * @since 09-03-2022
  * @version v0.5
- *
  */
 public class CustomerSearchPage extends CustomerSearchPageObject {
 
@@ -25,22 +22,18 @@ public class CustomerSearchPage extends CustomerSearchPageObject {
 	}
 
 	/**
-	 * 
 	 * @implNote This method is used to get the title value of the customer search
 	 *           page
 	 * @return CustomerSearchPage title
-	 * 
 	 */
 	public String customerSearchPageTitle() {
 		return getPageTitle();
 	}
 
 	/**
-	 * 
 	 * @implNote This method is used to get the header value of the customer search
 	 *           page
 	 * @return CustomerSearchPage header
-	 * 
 	 */
 	public String customerSearchPageHeader() {
 		return getElementText(getCustomerSearchPageHeader());
@@ -50,7 +43,6 @@ public class CustomerSearchPage extends CustomerSearchPageObject {
 	 * @implNote This method takes the input as customer name and search the
 	 *           customer
 	 * @param customerName
-	 * 
 	 */
 	public void customerSearch(String customerName) {
 		try {

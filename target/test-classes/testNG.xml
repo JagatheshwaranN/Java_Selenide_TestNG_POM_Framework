@@ -10,16 +10,16 @@
 			<class name="com.jtaf.qa.test.LoginPageTest" />
 		</classes>
 	</test> -->
-	<!-- <test name="HomePageTest">
+	<test name="HomePageTest">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.jtaf.qa.test.HomePageTest" />
 		</classes>
-	</test> -->
-	<test name="CustomerSearchPageTest">
+	</test>
+	<!-- <test name="CustomerSearchPageTest">
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.jtaf.qa.test.CustomerSearchPageTest" />
 		</classes>
-	</test>
+	</test> -->
 </suite>
