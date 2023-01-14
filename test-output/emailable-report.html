@@ -9,48 +9,10 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">testNGSuite</th></tr>
-<tr><td><a href="#t0">HomePageTest</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">62,549</td><td></td><td></td></tr>
+<tr><td><a href="#t0">HomePageTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">24,040</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">testNGSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">HomePageTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.jtaf.qa.test.HomePageTest</td><td><a href="#m0">verifyHomePageTest</a></td><td rowspan="1">1648740828032</td><td rowspan="1">41331</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">testNGSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">HomePageTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.jtaf.qa.test.HomePageTest</td><td><a href="#m0">verifyHomePageTest</a></td><td rowspan="1">1656849959845</td><td rowspan="1">6692</td></tr></tbody>
 </table>
-<h2>HomePageTest</h2><h3 id="m0">com.jtaf.qa.test.HomePageTest#verifyHomePageTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">TimeoutException: timeout: Timed out receiving message from renderer: 30.000
-Screenshot: file:/D:/Eclipse_Env/Workspace/JavaSelenideTestNGPOMFramework/build/reports/tests/1648740859280.0.png
-Page source: file:/D:/Eclipse_Env/Workspace/JavaSelenideTestNGPOMFramework/build/reports/tests/1648740859280.0.html
-Timeout: 4 s.
-Caused by: TimeoutException: timeout: Timed out receiving message from renderer: 30.000
-	at com.codeborne.selenide.ex.UIAssertionError.wrapToUIAssertionError(UIAssertionError.java:103)
-	at com.codeborne.selenide.ex.UIAssertionError.wrapThrowable(UIAssertionError.java:86)
-	at com.codeborne.selenide.ex.UIAssertionError.wrap(UIAssertionError.java:80)
-	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:93)
-	at com.sun.proxy.$Proxy18.click(Unknown Source)
-	at com.jtaf.qa.pages.LoginPage.doLogin(LoginPage.java:50)
-	at com.jtaf.qa.test.HomePageTest.verifyHomePageTest(HomePageTest.java:24)
-Caused by: org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
-  (Session info: chrome=99.0.4844.84)
-Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
-System info: host: &apos;JAGA-LAPTOP&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_201&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f4cd124db30a304ba239b80b6f2795cd, clickElement {id=5e2c88ef-759e-4437-a99a-c84da279d5fc}]
-Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\Jaga\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:6499}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:6499/devtool..., se:cdpVersion: 99.0.4844.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (f4cd124db30a304ba239b80b6f2795cd)] -&gt; xpath: //button[text()=&apos;Log in&apos;]]
-Session ID: f4cd124db30a304ba239b80b6f2795cd
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at com.codeborne.selenide.commands.Click.defaultClick(Click.java:73)
-	at com.codeborne.selenide.commands.Click.click(Click.java:52)
-	at com.codeborne.selenide.commands.Click.execute(Click.java:29)
-	at com.codeborne.selenide.commands.Click.execute(Click.java:19)
-	at com.codeborne.selenide.commands.Commands.execute(Commands.java:154)
-	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:131)
-	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:83)
-	... 28 more
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>HomePageTest</h2><h3 id="m0">com.jtaf.qa.test.HomePageTest#verifyHomePageTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
